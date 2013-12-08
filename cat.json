@@ -1,6 +1,5 @@
-[{
-	"family": "Raleway",
-	"weights": {
+{
+	"Raleway": {
 		"100": "Raleway Thin",
 		"200": "Raleway ExtraLight",
 		"300": "Raleway Light",
@@ -11,4 +10,4 @@
 		"800": "Raleway ExtraBold",
 		"900": "Raleway Heavy"
 	}
-}]
+}
