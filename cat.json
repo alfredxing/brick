@@ -9,5 +9,11 @@
 		"700": "Raleway Bold",
 		"800": "Raleway ExtraBold",
 		"900": "Raleway Heavy"
+	},
+	"Tex Gyre Heros": {
+		"400": "TeXGyreHeros",
+		"400i": "TeXGyreHeros-Italic",
+		"700": "TeXGyreHeros-Bold",
+		"700i": "TeXGyreHeros-BoldItalic"
 	}
 }
