@@ -19,5 +19,10 @@
 	"EB Garamond": {
 		"400": "EB Garamond 12",
 		"400i": "EB Garamond 12 Italic"
+	},
+	"Libre Baskerville": {
+		"400": "Libre Baskerville",
+		"400i": "Libre Baskerville Italic",
+		"700": "Libre Baskerville Bold"
 	}
 }
