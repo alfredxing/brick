@@ -23,7 +23,7 @@ foreach ($query as $key=>$val) {
 	$weights = explode(",", $val[1]);
 
 	foreach ($weights as $weight) {
-		$base_url = 'https://raw.github.com/alfredxing/brick/master/' . strtolower(preg_replace("/\s/", '', $family)) . "/";
+		$base_url = '//get.brick.im/' . strtolower(preg_replace("/\s/", '', $family)) . "/";
 		$local = $cat->$family->$weight;
 		$otf = $base_url . $weight . ".otf";
 		$woff = $base_url . $weight . ".woff";
