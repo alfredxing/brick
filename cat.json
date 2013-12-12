@@ -24,5 +24,17 @@
 		"400": "Libre Baskerville",
 		"400i": "Libre Baskerville Italic",
 		"700": "Libre Baskerville Bold"
+	},
+	"Open Sans": {
+		"300": "Open Sans Light",
+		"300i": "Open Sans Light Italic",
+		"400": "Open Sans",
+		"400i": "Open Sans Italic",
+		"600": "Open Sans Semibold",
+		"600i": "Open Sans Semibold Italic",
+		"700": "Open Sans Bold",
+		"700i": "Open Sans Bold Italic",
+		"900": "Open Sans Extrabold",
+		"900i": "Open Sans Extrabold Italic"
 	}
 }
