@@ -36,5 +36,11 @@
 		"700i": "Open Sans Bold Italic",
 		"900": "Open Sans Extrabold",
 		"900i": "Open Sans Extrabold Italic"
+	},
+	"Roboto Slab": {
+		"100": "Roboto Slab Thin",
+		"300": "Roboto Slab Light",
+		"400": "Roboto Slab",
+		"700": "Roboto Slab Bold"
 	}
 }
