@@ -5,9 +5,14 @@ header('Cache-Control: public, max-age=86400');
 header('Expires: ' . gmdate('D, d M Y H:i:s \G\M\T', time() + 86400));
 header('Pragma: Public');
 
-// Templates
-$TEMPLATE = "@font-face{font-family:'%s';font-style:%s;font-weight:%s;src:local('%s'),url(%s) format('svg'),url(%s) format('opentype'),url(%s) format('woff')}";
-$TEMPLATE_FORCE = "@font-face{font-family:'%s';font-style:%s;font-weight:%s;src:url(%s) format('svg'),url(%s) format('opentype'),url(%s) format('woff')}";
+// Templates segments
+$BASE = "@font-face{font-family:'%s';font-style:%s;font-weight:%s;src:%s}";
+$URI = array(
+	'LOCAL' => "local('%s')",
+	'SVG' => "url(%s) format('svg')",
+	'OTF' => "url(%s) format('opentype')",
+	'WOFF' => "url(%s) format('woff')"
+	);
 
 $query = explode("/", preg_replace("/\/$|^\//", "", urldecode($_SERVER['REQUEST_URI'])));
 $cat = json_decode(file_get_contents('./cat.json'), true);
@@ -39,11 +44,20 @@ foreach ($query as $key=>$val) {
 			$style = 'normal';
 		}
 
+		// Start with no URI's
+		$uri = array();
+
 		// Process flags
-		if (strpos($flags,'f') !== false)
-			echo sprintf($TEMPLATE_FORCE, $family, $style, $weight, $svg, $otf, $woff);
-		else
-			echo sprintf($TEMPLATE, $family, $style, $weight, $local, $svg, $otf, $woff);
+		if (strpos($flags,'f') === false)
+			array_push($uri, sprintf($URI['LOCAL'], $local));
+		if (strpos($flags,'s') === false)
+			array_push($uri, sprintf($URI['SVG'], $svg));
+		if (strpos($flags,'o') === false)
+			array_push($uri, sprintf($URI['OTF'], $otf));
+		if (strpos($flags,'w') === false)
+			array_push($uri, sprintf($URI['WOFF'], $woff));
+
+		echo sprintf($BASE, $family, $style, $weight, implode(',', $uri));
 	}
 }
 ?>
