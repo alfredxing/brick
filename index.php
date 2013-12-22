@@ -30,7 +30,7 @@ foreach ($query as $key=>$val) {
 		} else {
 			$style = 'normal';
 		}
-		echo sprintf($TEMPLATE, $family, $style, $weight, $local, $otf, $woff, $svg);
+		echo sprintf($TEMPLATE, $family, $style, $weight, $local, $svg, $otf, $woff);
 	}
 }
 ?>
