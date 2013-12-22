@@ -41,7 +41,7 @@ foreach ($query as $key=>$val) {
 
 		// Process flags
 		if (strpos($flags,'f') !== false)
-			echo sprintf($TEMPLATE_FORCE, $style, $weight, $local, $svg, $otf, $woff);
+			echo sprintf($TEMPLATE_FORCE, $family, $style, $weight, $svg, $otf, $woff);
 		else
 			echo sprintf($TEMPLATE, $family, $style, $weight, $local, $svg, $otf, $woff);
 	}
