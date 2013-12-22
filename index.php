@@ -10,7 +10,12 @@ $TEMPLATE = "@font-face{font-family:'%s';font-style:%s;font-weight:%s;src:local(
 $TEMPLATE_FORCE = "@font-face{font-family:'%s';font-style:%s;font-weight:%s;src:url(%s) format('svg'),url(%s) format('opentype'),url(%s) format('woff')}";
 
 $query = explode("/", preg_replace("/\/$|^\//", "", urldecode($_SERVER['REQUEST_URI'])));
-$cat = json_decode(file_get_contents('./cat.json'));
+$cat = json_decode(file_get_contents('./cat.json'), true);
+
+if ($query[0] == "") {
+	http_response_code(400);
+	exit();
+}
 
 foreach ($query as $key=>$val) {
 	$val = explode(":", $val);
@@ -20,7 +25,7 @@ foreach ($query as $key=>$val) {
 
 	foreach ($weights as $weight) {
 		$base_url = (empty($_SERVER['HTTPS']) ? 'http:' : 'https:') . '//get.brick.im/' . strtolower(preg_replace("/\s/", '', $family)) . "/";
-		$local = $cat->$family->$weight;
+		$local = $cat[$family][$weight];
 		
 		// Font URLs
 		$otf = $base_url . $weight . ".otf";
@@ -36,7 +41,7 @@ foreach ($query as $key=>$val) {
 
 		// Process flags
 		if (strpos($flags,'f') !== false)
-			echo sprintf($TEMPLATE, $family, $style, $weight, $local, $svg, $otf, $woff);
+			echo sprintf($TEMPLATE_FORCE, $style, $weight, $local, $svg, $otf, $woff);
 		else
 			echo sprintf($TEMPLATE, $family, $style, $weight, $local, $svg, $otf, $woff);
 	}
