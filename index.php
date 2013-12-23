@@ -50,7 +50,8 @@ foreach ($query as $key=>$val) {
 		// Process flags
 		if (strpos($flags,'f') === false)
 			array_push($uri, sprintf($URI['LOCAL'], $local));
-		if (strpos($flags,'s') === false)
+		// Disable SVG's by default
+		if (strpos($flags,'s') !== false)
 			array_push($uri, sprintf($URI['SVG'], $svg));
 		if (strpos($flags,'o') === false)
 			array_push($uri, sprintf($URI['OTF'], $otf));
