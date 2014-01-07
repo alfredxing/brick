@@ -1,0 +1,43 @@
+language: php
+
+php:
+  - 5.3
+  - 5.4
+  - 5.5
+
+before_install:
+  - git submodule update --init --recursive
+  - composer self-update
+  - composer install --dev -n --prefer-source
+  - git clone git://github.com/maxmind/libmaxminddb
+  - cd libmaxminddb
+  - ./bootstrap
+  - ./configure
+  - make
+  - sudo make install
+  - sudo ldconfig
+  - cd ../ext
+  - phpize
+  - CFLAGS="-Werror" ./configure --enable-maxminddb
+  - make
+  - NO_INTERACTION=1 make test
+  - cd ..
+  - pyrus install pear/PHP_CodeSniffer
+  - phpenv rehash
+
+script:
+  - mkdir -p build/logs
+  - phpcs --standard=PSR2 src/
+  - phpunit -c .coveralls-phpunit.xml.dist
+  - echo "extension = ext/modules/maxminddb.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - phpunit
+
+after_script:
+  - php vendor/bin/coveralls
+
+notifications:
+  email:
+    recipients:
+      - dev@maxmind.com
+    on_success: change
+    on_failure: always
