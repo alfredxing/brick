@@ -28,8 +28,7 @@ if ($query[0] == "") {
 }
 
 $SERVERS = array(
-	"//sea.cdn.brick.im/" => array( 47.7542, -122.2444 ),
-	"//lax.cdn.brick.im/" => array( 34.053, -118.2642 )
+	"//sea.cdn.brick.im/" => array( 47.7542, -122.2444 )
 	);
 
 // Latitude/longitude distance function
