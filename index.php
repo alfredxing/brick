@@ -14,8 +14,6 @@ header('Pragma: Public');
 $BASE = "@font-face{font-family:'%s';font-style:%s;font-weight:%s;src:%s}";
 $URI = array(
 	'LOCAL' => "local('%s')",
-	'SVG' => "url(%s) format('svg')",
-	'OTF' => "url(%s) format('opentype')",
 	'WOFF' => "url(%s) format('woff')"
 	);
 
@@ -54,9 +52,7 @@ foreach ($query as $key=>$val) {
 		$local = $cat[$family][$weight];
 
 		// Font URLs
-		$otf = $base_url . $weight . ".otf";
 		$woff = $base_url . $weight . ".woff";
-		$svg = $base_url . $weight . ".svg.gz";
 
 		if (preg_match("/i$/", $weight)) {
 			$style = 'italic';
@@ -71,13 +67,8 @@ foreach ($query as $key=>$val) {
 		// Process flags
 		if (strpos($flags,'f') === false)
 			array_push($uri, sprintf($URI['LOCAL'], $local));
-		// Disable SVG's by default
-		if (strpos($flags,'s') !== false)
-			array_push($uri, sprintf($URI['SVG'], $svg));
-		if (strpos($flags,'o') === false)
-			array_push($uri, sprintf($URI['OTF'], $otf));
-		if (strpos($flags,'w') === false)
-			array_push($uri, sprintf($URI['WOFF'], $woff));
+		// Add font URL
+		array_push($uri, sprintf($URI['WOFF'], $woff));
 
 		echo sprintf($BASE, $family, $style, $weight, implode(',', $uri));
 	}
