@@ -4,7 +4,7 @@ In the age of the Internet, we've found ourselves in yet another typographic bat
 
 Let's change that. The fonts served by Brick are clones of the original, converted without modification to serveral formats for wider browser compatibility.
 
-There's OTF, which are rendered beautifully by Google Chrome and Firefox, and WOFF, which is supported by modern versions of Internet Explorer. And then there's SVG (disabled by default), if you really need Chrome to render the fonts perfectly (but without proper kerning or ligatures).
+All fonts are served as WOFF-conpressed versions of the originals&mdash;no quality lost.
 
 ### Usage
 
