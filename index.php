@@ -25,7 +25,7 @@ $SERVERS = array(
 	"//sea.cdn.brick.im/" => array( 47.7542, -122.2444 )
 	);
 
-$server = $SERVERS[0];
+$server = "//sea.cdn.brick.im/";
 
 foreach ($query as $key=>$val) {
 	$val = explode(":", $val);
