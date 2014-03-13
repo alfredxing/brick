@@ -73,5 +73,11 @@
 		"600i": "Crimson Semibold Italic",
 		"700": "Crimson Bold",
 		"700i": "Crimson Bold Italic"
+	},
+	"Latin Modern": {
+		"400": "LMRoman10-Regular",
+		"400i": "LMRoman10-Italic",
+		"700": "LMRoman10-Bold",
+		"700i": "LMRoman10-BoldItalic"
 	}
 }
