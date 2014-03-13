@@ -1,3 +1,0 @@
-if (PHP_MAXMINDDB != "no") {
-	EXTENSION("maxminddb", "maxminddb.c");
-}
