@@ -48,7 +48,7 @@ foreach ($query as $key=>$val) {
 	$flags = isset($val[2]) ? $val[2] : '';
 
 	foreach ($weights as $weight) {
-		$base_url = (empty($_SERVER['HTTPS']) ? 'http:' : 'https:') . $server . strtolower(preg_replace("/\s/", '', $family)) . "/";
+		$base_url = $server . strtolower(preg_replace("/\s/", '', $family)) . "/";
 		$local = $cat[$family][$weight];
 
 		// Font URLs
