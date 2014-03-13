@@ -79,5 +79,9 @@
 		"400i": "LMRoman10-Italic",
 		"700": "LMRoman10-Bold",
 		"700i": "LMRoman10-BoldItalic"
+	},
+	"Montserrat": {
+		"400": "Montserrat-Regular",
+		"700": "Montserrat-Bold"
 	}
 }
