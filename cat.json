@@ -51,5 +51,13 @@
 		"300": "Roboto Slab Light",
 		"400": "Roboto Slab",
 		"700": "Roboto Slab Bold"
+	},
+	"Crimson": {
+		"400": "Crimson Roman",
+		"400i": "Crimson Italic",
+		"600": "Crimson Semibold",
+		"600i": "Crimson Semibold Italic",
+		"700": "Crimson Bold",
+		"700i": "Crimson Bold Italic"
 	}
 }
