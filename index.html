@@ -3,104 +3,46 @@
 <head>
 	<title>Brick. Webfonts that actually look good.</title>
 	<meta name="description" content="Brick is an open-source webfont service that serves fonts in their original form for high quality rendering across all browsers.">
-	<link rel="stylesheet" href="https://get.brick.im/TeX+Gyre+Heros:400,700:s">
-	<style>body{font-family:"Helvetica Neue","TeX Gyre Heros",Arial,sans-serif;font-size:16pt;margin:100px 0}header{margin:0 100px 50px}strong{font-weight:700}#fonts{list-style-type:none;margin:0;padding:0;overflow:hidden}#fonts li{margin:25px 0 100px 0;background:#fafafa}#fonts li a{display:block;position:relative;height:100px;padding:50px 100px}img.preview{height:100%;pointer-events:none}h1{display:inline-block;font-size:12pt}article{position:absolute;top:100%;font-size:12pt}span{color:#000;display:inline}span:before{content:'';margin:0 5px}footer{font-size:14pt;margin:100px}a{text-decoration:none;color:#6af}a:hover{text-decoration:underline}hr{border-color:#fafafa;border-style:solid;margin:25px 0}</style>
+	<link rel="stylesheet" href="css/main.min.css">
 </head>
-<body>
-	<header><strong>Brick.</strong> Webfonts that actually look good.</header>
-	<ul id="fonts">
-		<li>
-			<a href="#">
-				<img src="specimen/ebgaramond.png" class="preview" alt="EB Garamond specimen">
-				<article>
-					<h1>EB Garamond</h1>
-					<span>400, 400i</span>
-				</article>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<img src="specimen/opensans.png" class="preview" alt="Open Sans specimen">
-				<article>
-					<h1>Open Sans</h1>
-					<span>300, 300i, 400, 400i, 600, 600i, 700, 700i, 900, 900i</span>
-				</article>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<img src="specimen/librebaskerville.png" class="preview" alt="Libre Baskerville specimen">
-				<article>
-					<h1>Libre Baskerville</h1>
-					<span>400, 400i, 700</span>
-				</article>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<img src="specimen/raleway.png" class="preview" alt="Raleway specimen">
-				<article>
-					<h1>Raleway</h1>
-					<span>100, 100i, 200, 200i, 300, 300i, 400, 400i, 500, 500i, 600, 600i, 700, 700i, 800, 800i, 900, 900i</span>
-				</article>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<img src="specimen/roboto.png" class="preview" alt="Roboto specimen">
-				<article>
-					<h1>Roboto</h1>
-					<span>250, 250i, 300, 300i, 400, 400i, 500, 500i, 700, 700i, 900, 900i</span>
-				</article>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<img src="specimen/crimson.png" class="preview" alt="Crimson specimen">
-				<article>
-					<h1>Crimson</h1>
-					<span>400, 400i, 600, 600i, 700, 700i</span>
-				</article>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<img src="specimen/texgyreheros.png" class="preview" alt="TeX Gyre Heros specimen">
-				<article>
-					<h1>TeX Gyre Heros</h1>
-					<span>400, 400i, 700, 700i</span>
-				</article>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<img src="specimen/latinmodern.png" class="preview" alt="Latin Modern specimen">
-				<article>
-					<h1>Latin Modern</h1>
-					<span>400, 400i, 700, 700i</span>
-				</article>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<img src="specimen/montserrat.png" class="preview" alt="Montserrat specimen">
-				<article>
-					<h1>Montserrat</h1>
-					<span>400, 700</span>
-				</article>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<img src="specimen/robotoslab.png" class="preview" alt="Roboto Slab specimen">
-				<article>
-					<h1>Roboto Slab</h1>
-					<span>250, 300, 400, 700</span>
-				</article>
-			</a>
-		</li>
-	</ul>
-	<footer>
+<body class="index">
+	<header>
+		<div>
+			<h1><a href="#">Brick</a></h1>
+			<nav>
+				<ul>
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="./fonts">Fonts</a></li>
+					<li><a href="https://github.com/alfredxing/brick/wiki/Usage">Usage</a></li>
+					<li><a href="https://github.com/alfredxing/brick">GitHub</a></li>
+				</ul>
+			</nav>
+		</div>
+		<section id="hero">
+			<h1>Webfonts that actually look good.</h1>
+			<a href="https://github.com/alfredxing/brick/wiki/Usage" class="button">Get started</a>&nbsp;&nbsp;
+			<a href="./fonts" class="button">Browse fonts</a>
+		</section>
+	</header>
+	<section id="features" class="width">
+		<h2>Why Brick?</h2>
+		<ul class="grid three">
+			<li>
+				<h3>Beautiful</h3>
+				<p>We don't modify or subset the font in any way, so they are rendered the way they were meant to be seen.</p>
+			</li>
+			<li>
+				<h3>Fast</h3>
+				<p>Brick is served to your users through Fastly's industry-leading CDN network throughout.</p>
+			</li>
+			<li>
+				<h3>Open source</h3>
+				<p>Brick is entirely open-source, so in addition to being free, anyone interested can contribute to the project.</p>
+			</li>
+		</ul>
+	</section>
+	<section id="mission" class="width">
+		<h2>Mission</h2>
 		<p>
 			In the age of the Internet, we've found ourselves in yet another typographic battle. In an effort to speed up loading times, we've compressed fonts, and along the way, we've lost the majority of the quality of rendered type.
 		</p>
@@ -108,6 +50,7 @@
 			Let's change that. The fonts served by Brick are clones of the original, converted without modification to WOFF format for high quality rendering and fast loading across all modern browsers.
 		</p>
 		<hr>
+		<h3>Notes</h3>
 		<p>
 			Although it is my intention to keep these fonts as close to the original as possible, nothing beats the real thing. For non-web use, please download the fonts from their original source, included in the repository. Please respect the respective licenses of each font, which can also be found in the GitHub repository.
 		</p>
@@ -115,10 +58,9 @@
 			If you encounter any issues with any font or this service, please open an issue on GitHub or contact me. Do not contact the font creators; it is likely not their fault.
 		</p>
 		<p>Enjoy!</p>
-		<hr>
-		<p>
-			<a href="https://github.com/alfredxing/brick/wiki/Usage" target="_blank">Usage</a> &bull; <a href="https://github.com/alfredxing/brick" target="_blank">GitHub repository</a> &bull; <a href="https://github.com/alfredxing/brick/wiki">Wiki</a> &bull; Made by <a href="http://alfredxing.com" target="_blank">Alfred Xing</a>
-		</p>
+	</section>
+	<footer>
+		<p>Copyright &copy; MMXIV <a href="http://alfredxing.com" target="_blank">Alfred Xing</a> &bull; Fonts are copyright of their respective authors.</p>
 	</footer>
 </body>
 </html>
