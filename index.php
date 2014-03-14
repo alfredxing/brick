@@ -2,8 +2,8 @@
 
 header('Content-type: text/css');
 header('X-Content-Type-Options: nosniff');
-header('Cache-Control: public, max-age=86400');
-header('Expires: ' . gmdate('D, d M Y H:i:s \G\M\T', time() + 86400));
+header('Cache-Control: public, max-age=2628000');
+header('Expires: ' . gmdate('D, d M Y H:i:s \G\M\T', time() + 2628000));
 header('Last-Modified: ' . gmdate('D, d M Y H:i:s \G\M\T', filemtime(__FILE__)));
 header('Pragma: Public');
 
