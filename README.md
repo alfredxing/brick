@@ -33,3 +33,7 @@ Take note of:
 - Ligatures: the `fi` ligature in the title
 - Kerning: the `Ve` pair in `Vestibulum`
 - Character sets: although not demonstrated in the previews, Brick fonts include the entire character set that came with the original
+
+Fonts used in the previews:
+- EB Garamond (body text)
+- Libre Baskerville (header and link)
