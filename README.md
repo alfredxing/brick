@@ -13,9 +13,23 @@ Okay, let's get started. I don't want to overload the GitHub servers, so the fon
 Suppose you want to use a font that's in the catalog, for example, TeX Gyre Heros, and only in regular weight.  
 The stylesheet URL would be structured like this:  
 ````
-//get.brick.im/TeX+Gyre+Heros:400
+//brick.a.ssl.fastly.net/TeX+Gyre+Heros:400
 ````
 And if you also want to load EB Garamond regular and italic, you can do that too:
 ````
-//get.brick.im/TeX+Gyre+Heros:400/EB+Garamond:400,400i
+//brick.a.ssl.fastly.net/TeX+Gyre+Heros:400/EB+Garamond:400,400i
 ````
+
+### Is it actually better?
+
+You can see for yourself (best comparison is in Chrome; Firefox seems to render all fonts pretty well, though the difference is still clearly visible):
+
+- [Brick](http://brick.im/preview/brick.html)
+- [Google Fonts](http://brick.im/preview/google.html)
+
+Take note of:
+
+- Font rendering and smoothing
+- Ligatures: the `fi` ligature in the title
+- Kerning: the `Ve` pair in `Vestibulum`
+- Character sets: although not demonstrated in the previews, Brick fonts include the entire character set that came with the original
