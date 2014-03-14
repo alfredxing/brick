@@ -22,11 +22,7 @@ if ($query[0] == "") {
 	exit();
 }
 
-$SERVERS = array(
-	"//sea.cdn.brick.im/" => array( 47.7542, -122.2444 )
-	);
-
-$server = "//get.brick.im/";
+$server = "//brick.a.ssl.fastly.net/";
 
 foreach ($query as $key=>$val) {
 	$val = explode(":", $val);
