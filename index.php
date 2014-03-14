@@ -17,7 +17,7 @@ $query = explode("/", preg_replace("/\/$|^\//", "", urldecode($_SERVER['REQUEST_
 $cat = json_decode(file_get_contents('./cat.json'), true);
 
 if ($query[0] == "") {
-	http_response_code(400);
+	header($_SERVER['SERVER_PROTOCOL'] . ' 400 Bad Request');
 	exit();
 }
 
