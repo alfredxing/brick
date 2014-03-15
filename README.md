@@ -20,6 +20,8 @@ And if you also want to load EB Garamond regular and italic, you can do that too
 //brick.a.ssl.fastly.net/TeX+Gyre+Heros:400/EB+Garamond:400,400i
 ````
 
+Big shoutout to [Fastly](http://www.fastly.com), whose backing makes everything a lot faster!
+
 ### Is it actually better?
 
 You can see for yourself (best comparison is in Chrome; Firefox seems to render all fonts pretty well, though the difference is still clearly visible):
