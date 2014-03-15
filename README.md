@@ -39,3 +39,7 @@ Take note of:
 Fonts used in the previews:
 - EB Garamond (body text)
 - Libre Baskerville (header and link)
+
+### [Contributing](https://github.com/alfredxing/brick/wiki/Contributing)
+
+For contributing guidelines and instructions, please see the [wiki page](https://github.com/alfredxing/brick/wiki/Contributing).
