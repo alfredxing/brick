@@ -112,5 +112,13 @@
 	},
 	"Inconsolata": {
 		"500": "Inconsolata"
+	},
+	"Linux Libertine": {
+		"400": "Linux Libertine O",
+		"400i": "Linux Libertine O Italic",
+		"600": "Linux Libertine O Semibold",
+		"600i": "Linux Libertine O Semibold Italic",
+		"700": "Linux Libertine O Bold",
+		"700i": "Linux Libertine O Bold Italic"
 	}
 }
