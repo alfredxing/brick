@@ -109,5 +109,8 @@
 		"700i": "Source Sans Pro Bold Italic",
 		"900": "Source Sans Pro Black",
 		"900i": "Source Sans Pro Black Italic"
+	},
+	"Inconsolata": {
+		"500": "Inconsolata"
 	}
 }
