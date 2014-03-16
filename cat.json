@@ -120,5 +120,14 @@
 		"600i": "Linux Libertine O Semibold Italic",
 		"700": "Linux Libertine O Bold",
 		"700i": "Linux Libertine O Bold Italic"
+	},
+	"Source Code Pro": {
+		"200": "Source Code Pro ExtraLight",
+		"300": "Source Code Pro Light",
+		"400": "Source Code Pro Regular",
+		"500": "Source Code Pro Medium",
+		"600": "Source Code Pro Semibold",
+		"700": "Source Code Pro Bold",
+		"900": "Source Code Pro Black",
 	}
 }
