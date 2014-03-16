@@ -83,5 +83,17 @@
 	"Montserrat": {
 		"400": "Montserrat-Regular",
 		"700": "Montserrat-Bold"
+	},
+	"Noto Sans": {
+		"400": "Noto Sans Regular",
+		"400i": "Noto Sans Italic",
+		"700": "Noto Sans Bold",
+		"700i": "Noto Sans Bold Italic"
+	},
+	"Noto Serif": {
+		"400": "Noto Serif Regular",
+		"400i": "Noto Serif Italic",
+		"700": "Noto Serif Bold",
+		"700i": "Noto Serif Bold Italic"
 	}
 }
