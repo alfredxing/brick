@@ -141,5 +141,15 @@
 		"400i": "Anonymous Pro Italic",
 		"700": "Anonymous Pro Bold",
 		"700i": "Anonymous Pro Bold Italic"
+	},
+	"Clear Sans": {
+		"250": "Clear Sans Thin",
+		"300": "Clear Sans Light",
+		"400": "Clear Sans",
+		"400i": "Clear Sans Italic",
+		"500": "Clear Sans Medium",
+		"500i": "Clear Sans Medium Italic",
+		"700": "Clear Sans Bold",
+		"700i": "Clear Sans Bold Italic"
 	}
 }
