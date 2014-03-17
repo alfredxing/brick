@@ -135,5 +135,11 @@
 		"400i": "Bitter Italic",
 		"700": "Bitter Bold",
 		"700i": "Bitter Bold Italic"
+	},
+	"Anonymous Pro": {
+		"400": "Anonymous Pro",
+		"400i": "Anonymous Pro Italic",
+		"700": "Anonymous Pro Bold",
+		"700i": "Anonymous Pro Bold Italic"
 	}
 }
