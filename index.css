@@ -1,0 +1,136 @@
+/* Avoid Padding issues with texts in Grids
+   http://www.paulirish.com/2012/box-sizing-border-box-ftw/*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*Disable Link styling*/
+a {
+  text-decoration: none; color: inherit;
+}
+
+a:hover {
+     color:#00A0C6;
+     text-decoration:none;
+     cursor:pointer;
+}
+
+/*Change font here: Choose from Brick or Googlefont catalogues */
+body {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  background-color: #f2f2f2;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px;
+  padding-top:20px;
+}
+
+header {
+  font-size: 2em; font-weight:200;
+  border-bottom: 1px #dbe4e4 solid;
+  background-color: #bdbdbd;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 1px 1px;
+  width: 100%;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -khtml-border-radius: 10px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/* Change line height based on your reading preferece.
+   Recommended line height for Responsive Web Typography is 1.45
+   https://github.com/simplefocus/FlowType.JS */
+h1,h2,h3,h4,h5,h6,p {
+  line-height: 1.45;
+}
+
+/* Adjust default H1, H6 based on font weights imported from font-family above.
+   Assume the default browser size as 16px / font-weight: 100 / font-size: 1em
+*/
+
+h1 {
+  font-size: 4em; font-weight:400;
+}
+
+h2 {
+  font-size: 4em; font-weight:400; font-style: italic;
+}
+
+h3 {
+  font-size: 3em; font-weight:300;
+}
+
+h4 {
+  font-size: 3em; font-weight:300; font-style: italic;
+}
+
+h5, dl, ul {
+  font-size: 2em; font-weight:200;
+}
+
+h6, dd, li {
+  font-size: 2em; font-weight:200; font-style: italic
+}
+
+dd {
+  text-decoration: overline;
+  font-style: italic;
+  font-weight:100;
+}
+
+/* Test fonts in pts, in fractions of 16pt */
+
+p {
+  padding: 1% 1%;
+}
+
+p.pt8 {
+  font-size: 0.5em; font-weight:50;
+}
+
+p.pt10 {
+  font-size: 0.66em; font-weight:66;
+}
+
+p.pt12 {
+  font-size: 0.75em; font-weight:75;
+}
+
+p.pt16 {
+  font-size: 1em; font-weight:100;
+}
+
+p.pt24 {
+  font-size: 1.5em; font-weight:100;
+}
+
+p.pt36 {
+  font-size: 2.25em; font-weight:225;
+}
+
+p.pt48 {
+  font-size: 3em; font-weight:300;
+}
+
+p.pt64 {
+  font-size: 4em; font-weight:400;
+}
+
+p.pt72 {
+  font-size: 4.5em; font-weight:450;
+}
