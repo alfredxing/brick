@@ -150,3 +150,10 @@
         700i: "Alegreya Sans Bold Italic"
         800i: "Alegreya Sans ExtraBold Italic"
         900i: "Alegreya Sans Black Italic"
+    Alegreya:
+        400: "Alegreya"
+        700: "Alegreya Bold"
+        900: "Alegreya Black"
+        400i: "Alegreya Italic"
+        700i: "Alegreya Bold Italic"
+        900i: "Alegreya Black Italic"
