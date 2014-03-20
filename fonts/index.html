@@ -1,3 +1,6 @@
+---
+layout: none
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,154 +25,15 @@
 	<section id="catalogue">
 		<h1 class="width">Font catalogue</h1>
 		<ul id="fonts">
+			{% for font in site.data.fonts %}
 			<li>
-				<img src="../specimen/ebgaramond.png" class="preview" alt="EB Garamond specimen">
+				<img src="./{{ font[0] | replace: ' ', '' | downcase }}/specimen.png" class="preview" alt="EB Garamond specimen">
 				<article>
-					<h1>EB Garamond</h1>
-					<span>400, 400i</span>
+					<h1>{{ font[0] }}</h1>
+					<span>{% for style in font[1] %}{{ style[0] }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
 				</article>
 			</li>
-			<li>
-				<img src="../specimen/opensans.png" class="preview" alt="Open Sans specimen">
-				<article>
-					<h1>Open Sans</h1>
-					<span>300, 300i, 400, 400i, 600, 600i, 700, 700i, 900, 900i</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/librebaskerville.png" class="preview" alt="Libre Baskerville specimen">
-				<article>
-					<h1>Libre Baskerville</h1>
-					<span>400, 400i, 700</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/raleway.png" class="preview" alt="Raleway specimen">
-				<article>
-					<h1>Raleway</h1>
-					<span>100, 100i, 200, 200i, 300, 300i, 400, 400i, 500, 500i 600, 600i, 700, 700i, 800, 800i, 900, 900i</span>
-					</article>
-				</a>
-			</li>
-			<li>
-				<img src="../specimen/roboto.png" class="preview" alt="Roboto specimen">
-				<article>
-					<h1>Roboto</h1>
-					<span>250, 250i, 300, 300i, 400, 400i, 500, 500i, 700, 700i, 900, 900i</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/crimson.png" class="preview" alt="Crimson specimen">
-				<article>
-					<h1>Crimson</h1>
-					<span>400, 400i, 600, 600i, 700, 700i</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/clearsans.png" class="preview" alt="Clear Sans specimen">
-				<article>
-					<h1>Clear Sans</h1>
-					<span>250, 300, 400, 400i, 500, 500i, 700, 700i</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/linuxlibertine.png" class="preview" alt="Linux Libertine specimen">
-				<article>
-					<h1>Linux Libertine</h1>
-					<span>400, 400i, 600, 600i, 700, 700i</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/texgyreheros.png" class="preview" alt="TeX Gyre Heros specimen">
-				<article>
-					<h1>TeX Gyre Heros</h1>
-					<span>400, 400i, 700, 700i</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/latinmodern.png" class="preview" alt="Latin Modern specimen">
-				<article>
-					<h1>Latin Modern</h1>
-					<span>400, 400i, 700, 700i</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/montserrat.png" class="preview" alt="Montserrat specimen">
-				<article>
-					<h1>Montserrat</h1>
-					<span>400, 700</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/sourcesanspro.png" class="preview" alt="Source Sans Pro specimen">
-				<article>
-					<h1>Source Sans Pro</h1>
-					<span>200, 200i, 300, 300i, 400, 400i, 600, 600i, 700, 700i, 900, 900i</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/sourcecodepro.png" class="preview" alt="Source Code Pro specimen">
-				<article>
-					<h1>Source Code Pro</h1>
-					<span>200, 300, 400, 500, 600, 700, 900</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/robotoslab.png" class="preview" alt="Roboto Slab specimen">
-				<article>
-					<h1>Roboto Slab</h1>
-					<span>250, 300, 400, 700</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/notosans.png" class="preview" alt="Noto Sans specimen">
-				<article>
-					<h1>Noto Sans</h1>
-					<span>400, 400i, 700, 700i</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/notoserif.png" class="preview" alt="Noto Serif specimen">
-				<article>
-					<h1>Noto Serif</h1>
-					<span>400, 400i, 700, 700i</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/bitter.png" class="preview" alt="Bitter specimen">
-				<article>
-					<h1>Bitter</h1>
-					<span>400, 400i, 700, 700i</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/alegreyasans.png" class="preview" alt="Alegreya Sans specimen">
-				<article>
-					<h1>Alegreya Sans</h1>
-					<span>250, 250i, 300, 300i, 400, 400i, 500, 500i, 700, 700i, 800, 800i, 900, 900i</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/inconsolata.png" class="preview" alt="Inconsolata specimen">
-				<article>
-					<h1>Inconsolata</h1>
-					<span>500</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/telex.png" class="preview" alt="Telex specimen">
-				<article>
-					<h1>Telex</h1>
-					<span>400</span>
-				</article>
-			</li>
-			<li>
-				<img src="../specimen/anonymouspro.png" class="preview" alt="Anonymous Pro specimen">
-				<article>
-					<h1>Anonymous Pro</h1>
-					<span>400, 400i, 700, 700i</span>
-				</article>
-			</li>
+			{% endfor %}
 		</ul>
 	</section>
 	<section id="font-notes" class="width">
