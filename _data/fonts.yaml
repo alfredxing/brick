@@ -157,3 +157,10 @@
         400i: "Alegreya Italic"
         700i: "Alegreya Bold Italic"
         900i: "Alegreya Black Italic"
+    Aleo:
+        300: "Aleo Light"
+        400: "Aleo Regular"
+        700: "Aleo Bold"
+        300i: "Aleo LightItalic"
+        400i: "Aleo Italic"
+        700i: "Aleo BoldItalic"
