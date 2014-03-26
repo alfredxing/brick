@@ -27,16 +27,16 @@ layout: none
 		<ul id="fonts">
 			{% capture fonts %}
 				{% for font in site.data.fonts %}
-					{{ font[0] }}
+					{{ font[0] | replace: ' ', '&#32;' }}
 				{% endfor %}
 			{% endcapture %}
 			{% assign sorted = fonts | split:' ' | sort %}
 			{% for font in sorted %}
 			<li>
-				<img src="./{{ font[0] | replace: ' ', '' | downcase }}/specimen.png" class="preview" alt="EB Garamond specimen">
+				<img src="./{{ font | replace: '&#32;', '' | downcase }}/specimen.png" class="preview" alt="EB Garamond specimen">
 				<article>
-					<h1>{{ font }}</h1>
-					<span>{% for style in site.data.fonts[font] %}{{ style[0] }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+					<h1>{{ font | replace: '&#32;', ' ' }}</h1>
+					<span>{% for style in site.data.fonts[{{ font | replace: '&#32;', ' ' }}] %}{{ style[0] }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
 				</article>
 			</li>
 			{% endfor %}
