@@ -25,12 +25,19 @@ layout: none
 	<section id="catalogue">
 		<h1 class="width">Font catalogue</h1>
 		<ul id="fonts">
-			{% for font in site.data.fonts %}
+			{% capture fonts %}
+				{% for font in site.data.fonts %}
+					{{ font[0] | replace: ' ', '&#32;' }}
+				{% endfor %}
+			{% endcapture %}
+			{% assign sorted = fonts | split:' ' | sort %}
+			{% for font in sorted %}
+			{% assign name = font | replace: '&#32;', ' ' %}
 			<li>
-				<img src="./{{ font[0] | replace: ' ', '' | downcase }}/specimen.png" class="preview" alt="EB Garamond specimen">
+				<img src="./{{ name | replace: ' ', '' | downcase }}/specimen.png" class="preview" alt="EB Garamond specimen">
 				<article>
-					<h1>{{ font[0] }}</h1>
-					<span>{% for style in font[1] %}{{ style[0] }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+					<h1>{{ name }}</h1>
+					<span>{% for style in site.data.fonts[name] %}{{ style[0] }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
 				</article>
 			</li>
 			{% endfor %}
