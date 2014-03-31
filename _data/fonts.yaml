@@ -164,3 +164,7 @@
         300i: "Aleo LightItalic"
         400i: "Aleo Italic"
         700i: "Aleo BoldItalic"
+    Old Standard:
+        400: "Old Standard Regular"
+        400i: "Old Standard Italic"
+        700: "Old Standard Bold"
