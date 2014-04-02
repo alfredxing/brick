@@ -54,6 +54,11 @@
         400i: "Crimson Italic"
         600i: "Crimson Semibold Italic"
         700i: "Crimson Bold Italic"
+    Droid Serif:
+        400: "Droid Serif"
+        400i: "Droid Serif Italic"
+        700: "Droid Serif Bold"
+        700i: "Droid Serif Bold Italic"
     EB Garamond: 
         400: "EB Garamond 12 Regular"
         400i: "EB Garamond 12 Italic"
