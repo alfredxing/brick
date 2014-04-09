@@ -53,7 +53,6 @@ foreach ($query as $key=>$val) {
 
         if (substr($weight, -1) == "i") {
             $style = 'italic';
-            $weight = rtrim($weight, "i");
         } else {
             $style = 'normal';
         }
