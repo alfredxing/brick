@@ -51,12 +51,6 @@ foreach ($query as $key=>$val) {
               . $weight
               . ".woff";
 
-        if (substr($weight, -1) == "i") {
-            $style = 'italic';
-        } else {
-            $style = 'normal';
-        }
-
         // Start with no URI's
         $uri = '';
 
@@ -67,6 +61,13 @@ foreach ($query as $key=>$val) {
         }
         // Add font URL
         $uri .= "url(" . $woff . ") format('woff')";
+        
+        if (substr($weight, -1) == "i") {
+            $style = 'italic';
+            $weight = substr($weight, 0, -1);
+        } else {
+            $style = 'normal';
+        }
 
         echo sprintf($BASE, $family, $style, $weight, $uri);
     }
