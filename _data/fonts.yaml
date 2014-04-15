@@ -71,6 +71,11 @@
         400i: "EB Garamond 12 Italic"
     Inconsolata: 
         500: "Inconsolata"
+    Karla:
+        400: "Karla Regular"
+        400i: "Karla Italic"
+        700: "Karla Bold"
+        700i: "Karla Bold Italic"
     Latin Modern: 
         400: "LMRoman10-Regular"
         400i: "LMRoman10-Italic"
