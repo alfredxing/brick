@@ -47,6 +47,13 @@
         500i: "Clear Sans Medium Italic"
         700: "Clear Sans Bold"
         700i: "Clear Sans Bold Italic"
+    Comic Neue:
+        300: "Comic Neue Light"
+        300i: "Comic Neue Light Oblique"
+        400: "Comic Neue Regular"
+        400i: "Comic Neue Oblique"
+        700: "Comic Neue Bold"
+        700i: "Comic Neue Bold Oblique"
     Crimson: 
         400: "Crimson Roman"
         400i: "Crimson Italic"
