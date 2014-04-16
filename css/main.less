@@ -21,6 +21,21 @@ a:hover {
 	text-decoration: underline;
 }
 
+.width {
+	margin: 0 auto;
+	max-width: 840px;
+	width: 90%;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+
 header {
 	padding: 8em 0;
 	text-align: center;
@@ -60,8 +75,7 @@ nav  {
 }
 
 section {
-	margin: 5em auto;
-	max-width: 960px;
+	padding: 5em 0;
 	h1, h2, h3, h4, h5, h6 {
 		font-family: "Avenir Next", "Open Sans", sans-serif;
 		font-weight: 400;
@@ -78,13 +92,19 @@ section {
 	dd {
 		margin: 0.5em 0 1.5em 0;
 	}
+	div:not(:last-of-type) {
+		margin: 3em 0;
+	}
 	img {
 		height: 150px;
 	}
-	div:nth-child(even) img {
+	article {
+		max-width: 500px;
+	}
+	div:nth-child(odd) img, div:nth-child(even) article {
 		float: right;
 	}
-	div:nth-child(odd) img {
+	div:nth-child(even) img, div:nth-child(odd) article {
 		float: left;
 	}
 }
