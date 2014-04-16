@@ -5,7 +5,7 @@ body {
 	margin: 0;
 	padding: 0;
 	border-top: 5px solid @accent;
-	font: 400 12pt "Linux Libertine", serif;
+	font: 400 16pt "Linux Libertine", serif;
 	color: @black;
 	-webkit-font-feature-settings: "kern", "liga";
 	-ms-font-feature-settings: "kern", "liga";
@@ -22,7 +22,7 @@ a:hover {
 }
 
 header {
-	padding: 10em 0;
+	padding: 8em 0;
 	text-align: center;
 	-webkit-font-feature-settings: "kern", "liga", "dlig", "hlig";
 	-ms-font-feature-settings: "kern", "liga", "dlig", "hlig";
@@ -34,9 +34,27 @@ header {
 		padding: 0.5em 1em;
 		display: inline-block;
 		margin-bottom: 0;
+		pointer-events: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
 	}
 	h2 {
-		font-weight: 700;
+		font-weight: 400;
 		font-size: 32pt;
+	}
+}
+nav  {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		display: inline-block;
+	}
+	li:not(:first-child):before {
+		content: '\00A0\00B7\00A0\00A0';
 	}
 }
