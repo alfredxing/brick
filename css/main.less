@@ -5,7 +5,8 @@ body {
 	margin: 0;
 	padding: 0;
 	border-top: 5px solid @accent;
-	font: 400 12pt "Avenir Next", "Helvetica Neue", "Open Sans", Arial, sans-serif;
+	font: 400 12pt "Linux Libertine", serif;
+	color: @black;
 	-webkit-font-feature-settings: "kern", "liga";
 	-ms-font-feature-settings: "kern", "liga";
 	font-feature-settings: "kern", "liga";
@@ -19,245 +20,23 @@ a {
 a:hover {
 	text-decoration: underline;
 }
-button, .button {
-	display: inline-block;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	border: 3px solid;
-	background: none;
-	padding: 5px 10px;
-	border-radius: 3px;
-	font: inherit;
-	font-size: 0.9em;
-	outline: none;
-	cursor: pointer;
-	&.fill {
-		background: @accent;
-	}
-}
-hr {
-	border: 1px solid @accent;
-	margin: 2em 0;
-}
-
-.width {
-	width: 80%;
-	max-width: 960px;
-	margin: 0 auto;
-}
-.clearfix {
-	&:after {
-		clear: both;
-		content: " ";
-		display: block;
-		height: 0;
-		visibility: hidden;
-	}
-}
 
 header {
-	padding: 100px 0 15px 0;
-	// border-bottom: 3px solid @black;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	.clearfix;
-	a:hover {
-		text-decoration: none;
-		opacity: 0.75;
-	}
-	div {
-		h1 {
-			font-size: 1.5em;
-			line-height: 1em;
-			float: left;
-			margin: 0;
-			a { color: @black; }
-		}
-	}
-	nav {
-		float: right;
-	}
-	ul {
-		margin: 0;
-		padding: 0;
-		list-style-type: none;
-	}
-	li {
-		display: inline-block;
-		text-align: center;
-		margin-left: 20px;
-		padding: 0 5px;
-		a {
-			font-weight: 700;
-			line-height: 1.5em;
-		}
-		&.active {
-			position: relative;
-			a {
-				color: @black;
-			}
-			&:after {
-				content: " ";
-				position: absolute;
-				background: @black;
-				height: 5px;
-				width: 100%;
-				left: 0;
-				bottom: -20px;
-				-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				box-sizing: border-box;
-			}
-		}
-	}
-}
-body.index header {
-	background: @accent;
-	div, section { .width; }
-	h1, h1 a, a {
-		color: #FFF;
-	}
-	li.active {
-		a {
-			color: #FFF;
-		}
-		&:after {
-			background: #FFF;
-		}
-	}
-}
-
-#hero {
+	padding: 10em 0;
 	text-align: center;
-	padding: 175px 0 200px 0;
+	-webkit-font-feature-settings: "kern", "liga", "dlig", "hlig";
+	-ms-font-feature-settings: "kern", "liga", "dlig", "hlig";
+	font-feature-settings: "kern", "liga", "dlig", "hlig";
 	h1 {
-		font-size: 2em;
-		margin: 0;
-		padding: 0;
-	}
-	.button {
-		padding: 10px 20px;
-		border-color: #FFF;
+		font: 400 17pt "Avenir Next", "Open Sans", sans-serif;
 		color: #FFF;
-		margin-top: 25px;
-		font-size: 1em;
-		box-shadow: 0 1px fade(@black, 50%), 0 1px fade(@black, 50%) inset;
-		text-shadow: 0 1px fade(@black, 50%);
-		&.fill {
-			font-weight: 700;
-			background: #FFF;
-			color: @accent;
-			box-shadow: 0 1px fade(@black, 50%);
-			text-shadow: none;
-		}
+		background: @accent;
+		padding: 0.5em 1em;
+		display: inline-block;
+		margin-bottom: 0;
 	}
-	.button:hover {
-		opacity: 1;
-		box-shadow: 0 2px fade(@black, 50%), 0 2px fade(@black, 50%) inset;
-		text-shadow: 0 2px fade(@black, 50%);
+	h2 {
+		font-weight: 700;
+		font-size: 32pt;
 	}
-	.button.fill:hover {
-		box-shadow: 0 2px fade(@black, 50%);
-		text-shadow: none;
-	}
-}
-
-#features, #mission {
-	padding: 150px 0;
-	font-size: 14pt;
-}
-#features {
-	padding-bottom: 0;
-}
-.grid {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	text-align: left;
-	.clearfix;
-	li {
-		display: block;
-		float: left;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		padding: 0 20px;
-	}
-	li:first-of-type {
-		padding-left: 0;
-	}
-	li:last-of-type {
-		padding-right: 0;
-	}
-	&.three {
-		li {
-			width: 33%;
-		}
-	}
-}
-
-#catalogue {
-	padding: 150px 0;
-	> h1 {
-		margin-bottom: 25px;
-	}
-}
-#fonts {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	width: 100%;
-	overflow: hidden;
-	h1 {
-		font-size: 1.1em;
-		position: relative;
-		margin-bottom: 0.5em;
-		&:before {
-			content: '\21B3';
-			font-weight: 400;
-			position: absolute;
-			right: 100%;
-			margin-right: 10px;
-		}
-	}
-	li {
-		width: 100%;
-		margin-bottom: 50px;
-	}
-	img {
-		height: 100px;
-		width: auto;
-		padding: 50px 25px 0 25px;
-		opacity: 0.5;
-	}
-	img:hover {
-		opacity: 0.75;
-	}
-	article {
-		.width;
-	}
-}
-#font-notes {
-	padding-bottom: 150px;
-}
-
-footer {
-	p {
-		.width;
-		color: #FFF;
-		padding: 50px 0;
-	}
-	a {
-		color: #FFF;
-		padding-bottom: 2px;
-		border-bottom: 1px dotted #FFF;
-	}
-	a:hover {
-		text-decoration: none;
-		border-bottom-style: solid;
-	}
-	background: @accent;
 }
