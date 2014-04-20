@@ -45,9 +45,9 @@ hr {
 
 header {
     padding: 3em 0 0;
-    -webkit-font-feature-settings: "kern", "liga", "dlig", "hlig";
-    -ms-font-feature-settings: "kern", "liga", "dlig", "hlig";
-    font-feature-settings: "kern", "liga", "dlig", "hlig";
+    -webkit-font-feature-settings: "kern", "liga", "dlig";
+    -ms-font-feature-settings: "kern", "liga", "dlig";
+    font-feature-settings: "kern", "liga", "dlig";
     &>a {
         color: #FFF;
     }
@@ -72,6 +72,12 @@ header {
         max-width: 90%;
         font-weight: 400;
         font-size: 32pt;
+    }
+    span {
+        display: inline;
+        -webkit-font-feature-settings: "kern", "liga", "dlig", "hlig";
+        -ms-font-feature-settings: "kern", "liga", "dlig", "hlig";
+        font-feature-settings: "kern", "liga", "dlig", "hlig";
     }
 }
 #hero {
