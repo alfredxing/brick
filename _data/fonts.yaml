@@ -169,6 +169,16 @@
         700i: "Playfair Display Bold Italic"
         900: "Playfair Display Black"
         900i: "Playfair Display Black Italic"
+    PT Sans:
+        400: "PT Sans"
+        400i: "PT Sans Italic"
+        700: "PT Sans Bold"
+        700i: "PT Sans Bold Italic"
+    PT Serif:
+        400: "PT Serif"
+        400i: "PT Serif Italic"
+        700: "PT Serif Bold"
+        700i: "PT Serif Bold Italic"
     Raleway: 
         100: "Raleway Thin"
         100i: "Raleway Thin Italic"
