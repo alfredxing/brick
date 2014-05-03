@@ -61,6 +61,9 @@
         600i: "Crimson Semibold Italic"
         700: "Crimson Bold"
         700i: "Crimson Bold Italic"
+    Domine:
+        400: "Domine"
+        700: "Domine Bold"
     Droid Serif:
         400: "Droid Serif"
         400i: "Droid Serif Italic"
