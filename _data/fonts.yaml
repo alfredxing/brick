@@ -7,8 +7,8 @@
         900: "Alegreya Black"
         900i: "Alegreya Black Italic"
     Alegreya Sans: 
-        250: "Alegreya Sans Thin"
-        250i: "Alegreya Sans Thin Italic"
+        200: "Alegreya Sans Thin"
+        200i: "Alegreya Sans Thin Italic"
         300: "Alegreya Sans Light"
         300i: "Alegreya Sans Light Italic"
         400: "Alegreya Sans Regular"
@@ -39,7 +39,7 @@
         700: "Bitter Bold"
         700i: "Bitter Bold Italic"
     Clear Sans: 
-        250: "Clear Sans Thin"
+        200: "Clear Sans Thin"
         300: "Clear Sans Light"
         400: "Clear Sans"
         400i: "Clear Sans Italic"
@@ -129,8 +129,8 @@
         700: "Linux Libertine O Bold"
         700i: "Linux Libertine O Bold Italic"
     Merriweather:
-        250: "Merriweather Light"
-        250i: "Merriweather Light Italic"
+        200: "Merriweather Light"
+        200i: "Merriweather Light Italic"
         400: "Merriweather"
         400i: "Merriweather Italic"
         700: "Merriweather Bold"
@@ -202,8 +202,8 @@
         900: "Raleway Heavy"
         900i: "Raleway Heavy Italic"
     Roboto: 
-        250: "Roboto Thin"
-        250i: "Roboto Thin Italic"
+        200: "Roboto Thin"
+        200i: "Roboto Thin Italic"
         300: "Roboto Light"
         300i: "Roboto Light Italic"
         400: "Roboto"
@@ -215,7 +215,7 @@
         900: "Roboto Black"
         900i: "Roboto Black Italic"
     Roboto Slab: 
-        250: "Roboto Slab Thin"
+        200: "Roboto Slab Thin"
         300: "Roboto Slab Light"
         400: "Roboto Slab"
         700: "Roboto Slab Bold"
