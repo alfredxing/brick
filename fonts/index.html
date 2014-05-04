@@ -11,10 +11,6 @@ layout: none
 </head>
 <body>
     <header class="width">
-        <!--
-        Oh noes! Bad semantics with h1 inside a. Redesign of this page
-        coming soon anyways; this is a temp hack
-        -->
         <a href="../"><h1>Brick</h1></a>
         <nav>
             <ul>
@@ -39,7 +35,7 @@ layout: none
                 <img src="./{{ name | replace: ' ', '' | downcase }}/specimen.png" class="preview" alt="EB Garamond specimen">
                 <article>
                     <h1>{{ name }}</h1>
-                    <span>{% for style in site.data.fonts[name] %}{{ style[0] }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+                    <span>{% for style in site.data.fonts[name].styles %}{{ style[0] }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
                 </article>
             </li>
             {% endfor %}
