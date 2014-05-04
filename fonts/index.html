@@ -28,7 +28,7 @@ layout: none
                     {{ font[0] | replace: ' ', '&#32;' }}
                 {% endfor %}
             {% endcapture %}
-            {% assign sorted = fonts | split:' ' | sort %}
+            {% assign sorted = fonts | split: ' ' | sort: 'downcase' %}
             {% for font in sorted %}
             {% assign name = font | replace: '&#32;', ' ' %}
             <li>
