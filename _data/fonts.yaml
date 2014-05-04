@@ -1,4 +1,6 @@
 Alegreya:
+    class: serif
+    use:
     styles:
         400: "Alegreya"
         400i: "Alegreya Italic"
@@ -7,6 +9,8 @@ Alegreya:
         900: "Alegreya Black"
         900i: "Alegreya Black Italic"
 Alegreya Sans:
+    class: sans
+    use:
     styles:
         200: "Alegreya Sans Thin"
         200i: "Alegreya Sans Thin Italic"
@@ -23,6 +27,8 @@ Alegreya Sans:
         900: "Alegreya Sans Black"
         900i: "Alegreya Sans Black Italic"
 Aleo:
+    class: slab
+    use:
     styles:
         300: "Aleo Light"
         300i: "Aleo LightItalic"
@@ -31,18 +37,24 @@ Aleo:
         700: "Aleo Bold"
         700i: "Aleo BoldItalic"
 Anonymous Pro:
+    class: mono
+    use:
     styles:
         400: "Anonymous Pro"
         400i: "Anonymous Pro Italic"
         700: "Anonymous Pro Bold"
         700i: "Anonymous Pro Bold Italic"
 Bitter:
+    class: slab
+    use:
     styles:
         400: "Bitter Regular"
         400i: "Bitter Italic"
         700: "Bitter Bold"
         700i: "Bitter Bold Italic"
 Clear Sans:
+    class: sans
+    use:
     styles:
         200: "Clear Sans Thin"
         300: "Clear Sans Light"
@@ -53,6 +65,8 @@ Clear Sans:
         700: "Clear Sans Bold"
         700i: "Clear Sans Bold Italic"
 Comic Neue:
+    class: sans
+    use:
     styles:
         300: "Comic Neue Light"
         300i: "Comic Neue Light Oblique"
@@ -61,6 +75,8 @@ Comic Neue:
         700: "Comic Neue Bold"
         700i: "Comic Neue Bold Oblique"
 Crimson:
+    class: serif
+    use:
     styles:
         400: "Crimson Roman"
         400i: "Crimson Italic"
@@ -69,20 +85,28 @@ Crimson:
         700: "Crimson Bold"
         700i: "Crimson Bold Italic"
 Domine:
+    class: serif
+    use:
     styles:
         400: "Domine"
         700: "Domine Bold"
 Droid Serif:
+    class: serif
+    use:
     styles:
         400: "Droid Serif"
         400i: "Droid Serif Italic"
         700: "Droid Serif Bold"
         700i: "Droid Serif Bold Italic"
 EB Garamond:
+    class: serif
+    use:
     styles:
         400: "EB Garamond 12 Regular"
         400i: "EB Garamond 12 Italic"
 Fira Sans:
+    class: sans
+    use:
     styles:
         300: "Fira Sans OT Light"
         300i: "Fira Sans OT Light Italic"
@@ -93,27 +117,37 @@ Fira Sans:
         700: "Fira Sans OT Bold"
         700i: "Fira Sans OT Bold Italic"
 Gentium Basic:
+    class: serif
+    use:
     styles:
         400: "Gentium Basic"
         400i: "Gentium Basic Italic"
         700: "Gentium Basic Bold"
         700i: "Gentium Basic Bold Italic"
 Inconsolata:
+    class: mono
+    use:
     styles:
         500: "Inconsolata"
 Karla:
+    class: sans
+    use:
     styles:
         400: "Karla Regular"
         400i: "Karla Italic"
         700: "Karla Bold"
         700i: "Karla Bold Italic"
 Latin Modern:
+    class: serif
+    use:
     styles:
         400: "LMRoman10-Regular"
         400i: "LMRoman10-Italic"
         700: "LMRoman10-Bold"
         700i: "LMRoman10-BoldItalic"
 Lato:
+    class: sans
+    use:
     styles:
         100: "Lato Hairline"
         100i: "Lato Hairline Italic"
@@ -134,11 +168,15 @@ Lato:
         900: "Lato Black"
         900i: "Lato Black Italic"
 Libre Baskerville:
+    class: serif
+    use: body
     styles:
         400: "Libre Baskerville"
         400i: "Libre Baskerville Italic"
         700: "Libre Baskerville Bold"
 Linux Libertine:
+    class: serif
+    use:
     styles:
         400: "Linux Libertine O"
         400i: "Linux Libertine O Italic"
@@ -147,6 +185,8 @@ Linux Libertine:
         700: "Linux Libertine O Bold"
         700i: "Linux Libertine O Bold Italic"
 Merriweather:
+    class: serif
+    use: body
     styles:
         200: "Merriweather Light"
         200i: "Merriweather Light Italic"
@@ -157,27 +197,37 @@ Merriweather:
         900: "Merriweather Heavy"
         900i: "Merriweather Heavy Italic"
 Montserrat:
+    class: sans
+    use:
     styles:
         400: "Montserrat-Regular"
         700: "Montserrat-Bold"
 Noto Sans:
+    class: sans
+    use:
     styles:
         400: "Noto Sans Regular"
         400i: "Noto Sans Italic"
         700: "Noto Sans Bold"
         700i: "Noto Sans Bold Italic"
 Noto Serif:
+    class: serif
+    use:
     styles:
         400: "Noto Serif Regular"
         400i: "Noto Serif Italic"
         700: "Noto Serif Bold"
         700i: "Noto Serif Bold Italic"
 Old Standard:
+    class: serif
+    use:
     styles:
         400: "Old Standard Regular"
         400i: "Old Standard Italic"
         700: "Old Standard Bold"
 Open Sans:
+    class: sans
+    use:
     styles:
         300: "Open Sans Light"
         300i: "Open Sans Light Italic"
@@ -190,6 +240,8 @@ Open Sans:
         900: "Open Sans Extrabold"
         900i: "Open Sans Extrabold Italic"
 Playfair Display:
+    class: serif
+    use: display
     styles:
         400: "Playfair Display Regular"
         400i: "Playfair Display Italic"
@@ -198,18 +250,24 @@ Playfair Display:
         900: "Playfair Display Black"
         900i: "Playfair Display Black Italic"
 PT Sans:
+    class: sans
+    use:
     styles:
         400: "PT Sans"
         400i: "PT Sans Italic"
         700: "PT Sans Bold"
         700i: "PT Sans Bold Italic"
 PT Serif:
+    class: serif
+    use:
     styles:
         400: "PT Serif"
         400i: "PT Serif Italic"
         700: "PT Serif Bold"
         700i: "PT Serif Bold Italic"
 Raleway:
+    class: sans
+    use:
     styles:
         100: "Raleway Thin"
         100i: "Raleway Thin Italic"
@@ -230,6 +288,8 @@ Raleway:
         900: "Raleway Heavy"
         900i: "Raleway Heavy Italic"
 Roboto:
+    class: sans
+    use:
     styles:
         200: "Roboto Thin"
         200i: "Roboto Thin Italic"
@@ -244,12 +304,16 @@ Roboto:
         900: "Roboto Black"
         900i: "Roboto Black Italic"
 Roboto Slab:
+    class: slab
+    use:
     styles:
         200: "Roboto Slab Thin"
         300: "Roboto Slab Light"
         400: "Roboto Slab"
         700: "Roboto Slab Bold"
 Source Code Pro:
+    class: mono
+    use:
     styles:
         200: "Source Code Pro ExtraLight"
         300: "Source Code Pro Light"
@@ -259,6 +323,8 @@ Source Code Pro:
         700: "Source Code Pro Bold"
         900: "Source Code Pro Black"
 Source Sans Pro:
+    class: sans
+    use:
     styles:
         200: "Source Sans Pro ExtraLight"
         200i: "Source Sans Pro ExtraLight Italic"
@@ -273,9 +339,13 @@ Source Sans Pro:
         900: "Source Sans Pro Black"
         900i: "Source Sans Pro Black Italic"
 Telex:
+    class: sans
+    use:
     styles:
         400: "Telex-Regular"
 TeX Gyre Heros:
+    class: sans
+    use:
     styles:
         400: "TeXGyreHeros-Regular"
         400i: "TeXGyreHeros-Italic"
