@@ -27,6 +27,11 @@ Aleo:
     400i: "Aleo Italic"
     700: "Aleo Bold"
     700i: "Aleo BoldItalic"
+Andada:
+    400: "Andada"
+    400i: "Andada Italic"
+    700: "Andada Bold"
+    700i: "Andada Bold Italic"
 Anonymous Pro:
     400: "Anonymous Pro"
     400i: "Anonymous Pro Italic"
