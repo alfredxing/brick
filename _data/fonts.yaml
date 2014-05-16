@@ -125,6 +125,10 @@ Libre Baskerville:
     400: "Libre Baskerville"
     400i: "Libre Baskerville Italic"
     700: "Libre Baskerville Bold"
+Linux Biolinum:
+    400: "Linux Biolinum O"
+    400i: "Linux Biolinum O Italic"
+    700: "Linux Biolinum O Bold"
 Linux Libertine:
     400: "Linux Libertine O"
     400i: "Linux Libertine O Italic"
