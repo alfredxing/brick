@@ -97,7 +97,14 @@ Karla:
     400i: "Karla Italic"
     700: "Karla Bold"
     700i: "Karla Bold Italic"
-Latin Modern:
+Latin Modern Mono:
+    300: "LMMonoLt10-Regular"
+    300i: "LMMonoLt10-Oblique"
+    400: "LMMono10-Regular"
+    400i: "LMMono10-Italic"
+    700: "LMMonoLt10-Bold"
+    700i: "LMMonoLt10-BoldOblique"
+Latin Modern Roman:
     400: "LMRoman10-Regular"
     400i: "LMRoman10-Italic"
     700: "LMRoman10-Bold"
