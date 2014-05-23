@@ -261,6 +261,10 @@ Source Sans Pro:
     700i: "Source Sans Pro Bold Italic"
     900: "Source Sans Pro Black"
     900i: "Source Sans Pro Black Italic"
+Source Serif Pro:
+    400: "Source Serif Pro"
+    600: "Source Serif Pro Semibold"
+    700: "Source Serif Pro Bold"
 Telex:
     400: "Telex-Regular"
 TeX Gyre Heros:
