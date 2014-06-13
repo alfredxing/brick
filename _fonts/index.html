@@ -1,0 +1,22 @@
+---
+layout: page
+title: Font catalogue
+---
+<section id="catalogue">
+    <h1 class="width">Font catalogue</h1>
+    <ul id="fonts">
+        {% assign sorted = site.fonts %}
+        {% for font in sorted %}
+            {% unless font.layout == 'page' %}
+            {% assign name = font.name %}
+            <li>
+                <img src="./{{ name | replace: ' ', '' | downcase }}/specimen.png" class="preview" alt="EB Garamond specimen">
+                <article>
+                    <h1>{{ name }}</h1>
+                    <span>{% for style in font.styles %}{{ style[0] }}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+                </article>
+            </li>
+            {% endunless %}
+        {% endfor %}
+    </ul>
+</section>
