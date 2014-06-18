@@ -1,4 +1,28 @@
 ---
 layout: page
 ---
-{{ page.styles }}
+<section id="preview" class="width">
+	<span class="title">{{ page.name }}</span>
+	<article class="styles">
+		<span class="section">Styles</span>
+		{% for style in page.styles %}
+		<span class="style" data-desc="{{ style[0] }}" style="font-weight:{{ style[0] | replace: 'i', '' }}; {% if style[0] contains 'i' %}font-style: italic{% endif %}" contenteditable>Kiwi jam overfilled gaps in the quartz crystal box.</span>
+		{% endfor %}
+	</article>
+	<article class="headings">
+		<span class="section">Headings</span>
+		<h1 data-desc="h1" contenteditable>Kiwi jam overfilled gaps in the quartz crystal box.</h1>
+		<h2 data-desc="h2" contenteditable>Kiwi jam overfilled gaps in the quartz crystal box.</h2>
+		<h3 data-desc="h3" contenteditable>Kiwi jam overfilled gaps in the quartz crystal box.</h3>
+		<h4 data-desc="h4" contenteditable>Kiwi jam overfilled gaps in the quartz crystal box.</h4>
+		<h5 data-desc="h5" contenteditable>Kiwi jam overfilled gaps in the quartz crystal box.</h5>
+		<h6 data-desc="h6" contenteditable>Kiwi jam overfilled gaps in the quartz crystal box.</h6>
+	</article>
+	<article class="paragraphs">
+		<span class="section">Paragraphs</span>
+		<p data-desc="p @ 16pt" style="font-size: 16pt" contenteditable>One morning, as Gregor Samsa was waking up from anxious dreams, he discovered that in his bed he had been changed into a monstrous verminous bug. He lay on his armour-hard back and saw, as he lifted his head up a little, his brown, arched abdomen divided up into rigid bow-like sections. From this height the blanket, just about ready to slide off completely, could hardly stay in place. His numerous legs, pitifully thin in comparison to the rest of his circumference, flickered helplessly before his eyes.</p>
+		<p data-desc="p @ 14pt" style="font-size: 14pt" contenteditable>One morning, as Gregor Samsa was waking up from anxious dreams, he discovered that in his bed he had been changed into a monstrous verminous bug. He lay on his armour-hard back and saw, as he lifted his head up a little, his brown, arched abdomen divided up into rigid bow-like sections. From this height the blanket, just about ready to slide off completely, could hardly stay in place. His numerous legs, pitifully thin in comparison to the rest of his circumference, flickered helplessly before his eyes.</p>
+		<p data-desc="p @ 12pt" style="font-size: 12pt" contenteditable>One morning, as Gregor Samsa was waking up from anxious dreams, he discovered that in his bed he had been changed into a monstrous verminous bug. He lay on his armour-hard back and saw, as he lifted his head up a little, his brown, arched abdomen divided up into rigid bow-like sections. From this height the blanket, just about ready to slide off completely, could hardly stay in place. His numerous legs, pitifully thin in comparison to the rest of his circumference, flickered helplessly before his eyes.</p>
+		<p data-desc="p @ 10pt" style="font-size: 10pt" contenteditable>One morning, as Gregor Samsa was waking up from anxious dreams, he discovered that in his bed he had been changed into a monstrous verminous bug. He lay on his armour-hard back and saw, as he lifted his head up a little, his brown, arched abdomen divided up into rigid bow-like sections. From this height the blanket, just about ready to slide off completely, could hardly stay in place. His numerous legs, pitifully thin in comparison to the rest of his circumference, flickered helplessly before his eyes.</p>
+	</article>
+</section>

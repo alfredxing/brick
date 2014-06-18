@@ -3,13 +3,17 @@
 <head>
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ page.name }}{% endif %} &middot; Brick</title>
 	<meta name="description" content="Brick is an open-source webfont service that serves fonts in their original form for high quality rendering across all browsers.">
-	<link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400/Open+Sans:400">
+	<link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400/Open+Sans:400/Latin+Modern+Mono:400">
 	<link rel="stylesheet" href="http://localhost:9001/css/main.min.css">
+	{% if page.name %}
+	<link rel="stylesheet" type="text/css" href="//brick.a.ssl.fastly.net/{{ page.name }}:{% for style in page.styles %}{{ style[0] }}{% unless forloop.last %},{% endunless %}{% endfor %}">
+	<style type="text/css">#preview, #preview *{font-family:"{{ page.name }}"}</style>
+	{% endif %}
 </head>
 <body>
 	<header class="page">
 		<div class="width">
-			<a href="../"><h1>Brick</h1></a>
+			<a href="/"><h1>Brick</h1></a>
 			<nav>
 				<ul>
 					<li><a href="{{ site.url }}/">Home</a></li>
