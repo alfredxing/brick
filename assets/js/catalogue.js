@@ -1,4 +1,8 @@
-var bucket = {};
+var bucket = {},
+    filters = {
+        class: /.*/,
+        usage: /.*/
+    };
 
 // forEach polyfill for NodeList
 NodeList.prototype.forEach=function(c,d){var e,a;if(null==this)throw new TypeError(" this is null or not defined");var b=Object(this),g=b.length>>>0;if("function"!==typeof c)throw new TypeError(c+" is not a function");d&&(e=d);for(a=0;a<g;){var f;a in b&&(f=b[a],c.call(e,f,a,b));a++}}
@@ -6,19 +10,15 @@ NodeList.prototype.forEach=function(c,d){var e,a;if(null==this)throw new TypeErr
 Object.keys||(Object.keys=function(b){var c=[],a;for(a in b)Object.prototype.hasOwnProperty.call(b,a)&&c.push(a);return c});
 
 // Filters
-function filter(field, value) {
+function filter() {
+    var count = 1;
     document.getElementById("fonts").querySelectorAll(".font").forEach(function(el) {
-        if (!value) {
-            el.className = "font";
-        } else if (el.getAttribute("data-" + field) !== value) {
-            el.className = "font hidden";
+        if (!(el.getAttribute("data-class").match(filters.class) && el.getAttribute("data-usage").match(filters.usage))) {
+                el.className = "font hidden";
         } else {
-            el.className = "font";
+            el.className = "font" + ((count % 5 === 0) ? " row-end" : "");
+            count++
         }
-    });
-    document.getElementById("fonts").querySelectorAll(".font:not(.hidden)").forEach(function(el, i) {
-        if (i % 5 == 4)
-            el.className = "font row-end";
     });
 }
 
@@ -67,14 +67,15 @@ document.getElementById("filters").onclick = function(e) {
     (function () {
         if (this.className === "option active") {
             this.className = "option";
-            filter(this.getAttribute("data-field"), false);
+            filters[this.getAttribute("data-field")] = /.*/;
         } else {
             this.parentNode.childNodes.forEach(function(el) {
                 el.className = "option";
             });
             this.className = "option active";
-            filter(this.getAttribute("data-field"), this.getAttribute("data-option"));
+            filters[this.getAttribute("data-field")] = new RegExp(this.getAttribute("data-option"));
         }
+        filter();
     }).call(e.target);
 }
 
