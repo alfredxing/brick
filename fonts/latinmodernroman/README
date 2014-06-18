@@ -1,0 +1,1022 @@
+###########################################################################
+############          The Latin Modern Family of Fonts         ############
+###########################################################################
+
+Font: The Latin Modern Family of Fonts
+Designer (Computer Modern Family of Fonts): Donald E. Knuth
+Author: Bogus\l{}aw Jackowski and Janusz M. Nowacki
+Version: 2.004
+Date: 30 X 2009
+Downloads: http://www.gust.org.pl/projects/e-foundry/latin-modern/
+License: 
+  % Copyright 2003--2009 by B. Jackowski and J.M. Nowacki
+  % (on behalf of TeX Users Groups).
+  % This work is released under the GUST Font License
+  %   -- see GUST-FONT-LICENSE.txt. 
+  % This work has the LPPL maintenance status "maintained".
+  % The Current Maintainer of this work is Bogus\l{}aw Jackowski
+  %   and Janusz M. Nowacki.
+  % This work consists of the files listed in the MANIFEST.txt file.
+
+###########################################################################
+############       A BRIEF DESCRIPTION OF THE LM PACKAGE       ############
+###########################################################################
+
+The current LM package contains the most recent version
+of the Latin Modern family of fonts in the PostScript Type 1 and
+OpenType format. The fonts are based on Donald E. Knuth's Computer Modern
+fonts in the PostScript Type 1 format, released into public domain by the
+American Mathematical Society (for the history of the outline version of
+the CM fonts see, e.g., http://www.math.utah.edu/~beebe/fonts/bluesky.html ).
+The project is supported by TeX users groups: CSTUG, DANTE eV, GUST,
+GUTenberg, NTG, and TUG.
+
+The Latin Modern Family of fonts consists of 72 text fonts
+(some of them have their counterparts in the standard Computer Modern
+family, some not), namely:
+
+  lmb10.mp lmbo10.mp lmbx10.mp lmbx12.mp lmbx5.mp lmbx6.mp
+  lmbx7.mp lmbx8.mp lmbx9.mp lmbxi10.mp lmbxo10.mp lmcsc10.mp
+  lmcsco10.mp lmdunh10.mp lmduno10.mp lmr10.mp lmr12.mp
+  lmr17.mp lmr5.mp lmr6.mp lmr7.mp lmr8.mp lmr9.mp lmri10.mp
+  lmri12.mp lmri7.mp lmri8.mp lmri9.mp lmro10.mp lmro12.mp
+  lmro17.mp lmro8.mp lmro9.mp lmss10.mp lmss12.mp lmss17.mp
+  lmss8.mp lmss9.mp lmssbo10.mp lmssbx10.mp lmssdc10.mp
+  lmssdo10.mp lmsso10.mp lmsso12.mp lmsso17.mp lmsso8.mp
+  lmsso9.mp lmssq8.mp lmssqbo8.mp lmssqbx8.mp lmssqo8.mp
+  lmtcsc10.mp lmtcso10.mp lmtk10.mp lmtko10.mp lmtl10.mp
+  lmtlc10.mp lmtlco10.mp lmtlo10.mp lmtt10.mp lmtt12.mp
+  lmtt8.mp lmtt9.mp lmtti10.mp lmtto10.mp lmu10.mp lmvtk10.mp
+  lmvtko10.mp lmvtl10.mp lmvtlo10.mp lmvtt10.mp lmvtto10.mp
+
+and 20 math fonts (being at the moment a duplicate of PL math fonts):
+
+  lmbsy10 lmbsy5 lmbsy7 lmex10 lmmi10 lmmi12 lmmi5 lmmi6 lmmi7 lmmi8
+  lmmi9 lmmib10 lmmib5 lmmib7 lmsy10 lmsy5 lmsy6 lmsy7 lmsy8 lmsy9
+
+There is no OpenType format provided for math fonts (yet).
+
+The Latin Modern fonts can be freely used and distributed under the GUST Font
+License (see above) which is a slightly modified version of the LaTeX
+Project Public License (LPPL; see http://www.latex-project.org/lppl.txt )
+
+The fonts, as compared to the CM family, contain a lot of additional
+characters, mainly accented ones. To our knowledge, the repertoir of
+characters covers all European languages as well as some other Latin-based
+alphabets such as Vietnamese and Navajo; at the request of users, recent
+extensions of Latin Modern provide glyphs sufficient for typesetting of
+romanized transliterations of Arabic and Sanskrit scripts.
+
+We have frequently used the information presented by Michael Everson
+at the ``The Alphabets of Europe'' ( http://www.evertype.com/alphabets/ )
+web site. If you know about European languages that are not covered
+completely or if some glyphs have apparently wrong shapes -- please let
+us know. The list of fonts and characters available so far can be found
+at the end of this file.
+
+The LaTeX support, i.e., *.fd and *.sty files, is part of this
+distribution (see below) but ConTeXt and XeLaTeX support for
+Latin Modern is distributed separately, with the respective packages.
+Note, however, that Latin Modern is the default family of fonts
+for ConTeXt, therefore users do not need to load any specific files.
+
+                           *   *   *
+
+The package consists of the files in the directories conforming
+to the TeX Directory Structure (v. 1.1), splitted into three archives:
+
+lm2.003-bas.zip -- basic set; the directories contain:
+~~~~~~~~~~~~~~
+doc/fonts/lm             this file plus a few LaTeX examples (test files);
+tex/latex/lm             the relevant LaTeX support files (very many thanks
+                         to Daniel Flipo and Marcin Woli\'nski).
+fonts/enc/dvips/lm       support files for dvips (*.enc files); besides
+                         the basic encoding files for Latin Modern fonts
+                         (cf. also tfm files), the encoding files
+                         for the substitution of CM, CS, PL, and VN fonts
+                         with LMs are provided
+fonts/map/dvips/lm       support file for dvips (lm.map file); besides
+                         the basic map files for Latin Modern fonts
+                         (cf. also tfm files), the map files for
+                         the substitution of CM, CS, PL, and VN fonts
+                         with LMs are provided (substitution maps
+                         were prepared by Staszek Wawrykiewicz
+                         and Thomas Esser -- thanks for the help)
+fonts/map/dvipdfm/lm     map files for dvipdfm (mostly for math fonts
+                         used in ConTeXt with XeTeX)
+fonts/opentype/public/lm OpenType format (*.otf);
+fonts/type1/public/lm    PostScript (Type 1) font files and printer font
+                         metric files (*.pfb and *.pfm, respectively);
+fonts/tfm/public/lm      TeX font metric files (*.tfm) for:
+                         -- CS (CS TUG) encoding (cs-*.tfm),
+                         -- EC (Cork) encoding (ec-*.tfm),
+                         -- L7X (Lithuanian) encoding (l7x-*.tfm),
+                         -- QX encoding (qx-*.tfm),
+                         -- RM (``regular math'', used in OT1 and OT4)
+                            encoding (qx-*.tfm),
+                         -- Y&Y's TeX'n'ANSI aka LY1 encoding
+                            (texnansi-*.tfm),
+                         -- T5 (Vietnamese) encoding (t5-*.tfm),
+                         -- Text Companion for EC fonts aka TS1 (ts1-*.tfm).
+fonts/afm/public/lm      Adobe font metric files (*.afm);
+
+lm2.003mt1.zip -- Latin Modern source font files for the METATYPE1 package
+~~~~~~~~~~~~~~    (fonts/source/public/lm); the version 0.48y of METATYPE1
+                  is required, see ftp://ftp.bop.com.pl/pub/metatype1 ,
+                  for the current version of the engine; in order to generate
+                  a TeX font metrics with a given encoding, the respective
+                  encoding file should be placed in the current directory
+                  and renamed to lm-tex.mpe; otherwise a default encoding
+                  (QX) will be used
+
+lm2.003-otf.zip -- Latin Modern OpenType font files, for those who are not
+~~~~~~~~~~~~~~~~   interested in the whole bundle
+
+The project has been launched and is supported by TeX USERS GROUPS
+(CS TUG, DANTE eV, GUST, GUTenberg, NTG, TUG).
+
+Hearty thanks to the representatives of these groups and also to all
+people who helped with comments, ideas, remarks, bug reports, objections,
+hints, consolations, etc. Perhaps the largest number of corrections
+is the result of Karel P\'\i\v{s}ka's exhaustive and methodical efforts
+in checking the quality of our results; also, he redesigned the `ring'
+accent -- very many thanks, Karel.
+
+Email contact: Bogus\l{}aw Jackowski aka Jacko, B_Jackowski@gust.org.pl
+
+                           *   *   *
+
+Last but not least: hearty thanks to all people who helped with comments,
+ideas, remarks, bug reports, objections, hints, consolations, etc.
+
+                           *   *   *
+
+Latin Modern text fonts contents details:
+
+---------------------------------
+total number of fonts          72
+total number of characters  58604
+total number of kern pairs 532383
+---------------------------------
+
+LAYOUT 1 (824)
+lmssq8 lmssqbo8 lmssqbx8 lmssqo8
+ Extra chars: varI varIJ varIogonek
+
+LAYOUT 2 (821; basic)
+lmb10 lmbo10 lmbx10 lmbx12 lmbx5 lmbx6 lmbx7 lmbx8 lmbx9 lmbxi10 lmbxo10
+lmdunh10 lmduno10 lmr10 lmr12 lmr17 lmr5 lmr6 lmr7 lmr8 lmr9 lmri10 lmri12
+lmri7 lmri8 lmri9 lmro10 lmro12 lmro17 lmro8 lmro9 lmss10 lmss12 lmss17
+lmss8 lmss9 lmssbo10 lmssbx10 lmssdc10 lmssdo10 lmsso10 lmsso12 lmsso17
+lmsso8 lmsso9 lmu10 lmvtk10 lmvtko10 lmvtl10 lmvtlo10 lmvtt10 lmvtto10
+
+LAYOUT 3 (814)
+lmcsc10 lmcsco10
+ Missing chars: f_k ff ffi ffl fi fl longs
+
+LAYOUT 4 (785)
+lmtk10 lmtko10 lmtl10 lmtlc10 lmtlco10 lmtlo10 lmtt10 lmtt12 lmtt8 lmtt9
+lmtti10 lmtto10
+ Missing chars: eight.oldstyle eight.prop f_k ff ffi ffl fi five.oldstyle
+five.prop fl four.oldstyle four.prop Germandbls hyphen.prop IJ ij
+nine.oldstyle nine.prop one.oldstyle one.prop permyriad servicemark
+seven.oldstyle seven.prop six.oldstyle six.prop suppress three.oldstyle
+three.prop trademark two.oldstyle two.prop varcopyright varregistered
+zero.oldstyle zero.prop
+
+LAYOUT 5 (784)
+lmtcsc10 lmtcso10
+ Missing chars: eight.oldstyle eight.prop f_k ff ffi ffl fi five.oldstyle
+five.prop fl four.oldstyle four.prop Germandbls hyphen.prop IJ ij longs
+nine.oldstyle nine.prop one.oldstyle one.prop permyriad servicemark
+seven.oldstyle seven.prop six.oldstyle six.prop suppress three.oldstyle
+three.prop trademark two.oldstyle two.prop varcopyright varregistered
+zero.oldstyle zero.prop
+
+
+              LAYOUTS: 12345
+----------------------------
+A                      +++++
+a                      +++++
+Aacute                 +++++
+aacute                 +++++
+Abreve                 +++++
+abreve                 +++++
+Abreveacute            +++++
+abreveacute            +++++
+Abrevedotbelow         +++++
+abrevedotbelow         +++++
+Abrevegrave            +++++
+abrevegrave            +++++
+Abrevehookabove        +++++
+abrevehookabove        +++++
+Abrevetilde            +++++
+abrevetilde            +++++
+Acaron                 +++++
+acaron                 +++++
+Acircumflex            +++++
+acircumflex            +++++
+Acircumflexacute       +++++
+acircumflexacute       +++++
+Acircumflexdotbelow    +++++
+acircumflexdotbelow    +++++
+Acircumflexgrave       +++++
+acircumflexgrave       +++++
+Acircumflexhookabove   +++++
+acircumflexhookabove   +++++
+Acircumflextilde       +++++
+acircumflextilde       +++++
+Acute                  +++++
+acute                  +++++
+acute.dup              +++++
+acute.ts1              +++++
+Acutecomb              +++++
+acutecomb              +++++
+Adblgrave              +++++
+adblgrave              +++++
+Adieresis              +++++
+adieresis              +++++
+Adotbelow              +++++
+adotbelow              +++++
+AE                     +++++
+ae                     +++++
+AE.dup                 +++++
+ae.dup                 +++++
+AEacute                +++++
+aeacute                +++++
+Agrave                 +++++
+agrave                 +++++
+Ahookabove             +++++
+ahookabove             +++++
+Alpha                  +++++
+Amacron                +++++
+amacron                +++++
+ampersand              +++++
+anglearc               +++++
+angleleft              +++++
+angleright             +++++
+Aogonek                +++++
+aogonek                +++++
+Aogonekacute           +++++
+aogonekacute           +++++
+Aring                  +++++
+aring                  +++++
+Aringacute             +++++
+aringacute             +++++
+arrowdown              +++++
+arrowleft              +++++
+arrowright             +++++
+arrowup                +++++
+asciicircum            +++++
+asciitilde             +++++
+asterisk               +++++
+asteriskmath           +++++
+at                     +++++
+Atilde                 +++++
+atilde                 +++++
+B                      +++++
+b                      +++++
+backslash              +++++
+baht                   +++++
+bar                    +++++
+Beta                   +++++
+bigcircle              +++++
+blanksymbol            +++++
+born                   +++++
+braceleft              +++++
+braceright             +++++
+bracketleft            +++++
+bracketright           +++++
+Breve                  +++++
+breve                  +++++
+breve.ts1              +++++
+Breveacute             +++++
+breveacute             +++++
+brevebelow             +++++
+brevebelowcomb         +++++
+brevebelowinverted     +++++
+brevebelowinvertedcomb +++++
+Brevecomb              +++++
+brevecomb              +++++
+Brevegrave             +++++
+brevegrave             +++++
+Brevehookabove         +++++
+brevehookabove         +++++
+Breveinverted          +++++
+breveinverted          +++++
+Breveinvertedcomb      +++++
+breveinvertedcomb      +++++
+Brevetilde             +++++
+brevetilde             +++++
+brokenbar              +++++
+bullet                 +++++
+C                      +++++
+c                      +++++
+Cacute                 +++++
+cacute                 +++++
+Caron                  +++++
+caron                  +++++
+caron.ts1              +++++
+Caroncomb              +++++
+caroncomb              +++++
+Ccaron                 +++++
+ccaron                 +++++
+Ccedilla               +++++
+ccedilla               +++++
+Ccircumflex            +++++
+ccircumflex            +++++
+Cdotaccent             +++++
+cdotaccent             +++++
+cedilla                +++++
+cedilla.dup            +++++
+cent                   +++++
+cent.oldstyle          +++++
+centigrade             +++++
+Chi                    +++++
+Circumflex             +++++
+circumflex             +++++
+circumflex.dup         +++++
+Circumflexacute        +++++
+circumflexacute        +++++
+Circumflexcomb         +++++
+circumflexcomb         +++++
+Circumflexgrave        +++++
+circumflexgrave        +++++
+Circumflexhookabove    +++++
+circumflexhookabove    +++++
+Circumflextilde        +++++
+circumflextilde        +++++
+colon                  +++++
+colonmonetary          +++++
+comma                  +++++
+commaaccent            +++++
+commaaccentcomb        +++++
+copyleft               +++++
+copyright              +++++
+currency               +++++
+cwm                    +++++
+cwmascender            +++++
+cwmcapital             +++++
+D                      +++++
+d                      +++++
+dagger                 +++++
+daggerdbl              +++++
+dblbracketleft         +++++
+dblbracketright        +++++
+dblGrave               +++++
+dblgrave               +++++
+dblgrave.ts1           +++++
+dblGravecomb           +++++
+dblgravecomb           +++++
+dblverticalbar         +++++
+Dcaron                 +++++
+dcaron                 +++++
+Dcroat                 +++++
+dcroat                 +++++
+Ddotbelow              +++++
+ddotbelow              +++++
+degree                 +++++
+Delta                  +++++
+diameter               +++++
+died                   +++++
+Dieresis               +++++
+dieresis               +++++
+dieresis.dup           +++++
+dieresis.ts1           +++++
+Dieresisacute          +++++
+dieresisacute          +++++
+Dieresiscaron          +++++
+dieresiscaron          +++++
+Dieresiscomb           +++++
+dieresiscomb           +++++
+Dieresisgrave          +++++
+dieresisgrave          +++++
+discount               +++++
+divide                 +++++
+divorced               +++++
+Dlinebelow             +++++
+dlinebelow             +++++
+dollar                 +++++
+dollar.oldstyle        +++++
+dong                   +++++
+Dotaccent              +++++
+dotaccent              +++++
+Dotaccentcomb          +++++
+dotaccentcomb          +++++
+dotbelow               +++++
+dotbelowcomb           +++++
+dotlessi               +++++
+dotlessj               +++++
+dotlessj.dup           +++++
+E                      +++++
+e                      +++++
+Eacute                 +++++
+eacute                 +++++
+Ebreve                 +++++
+ebreve                 +++++
+Ecaron                 +++++
+ecaron                 +++++
+Ecircumflex            +++++
+ecircumflex            +++++
+Ecircumflexacute       +++++
+ecircumflexacute       +++++
+Ecircumflexdotbelow    +++++
+ecircumflexdotbelow    +++++
+Ecircumflexgrave       +++++
+ecircumflexgrave       +++++
+Ecircumflexhookabove   +++++
+ecircumflexhookabove   +++++
+Ecircumflextilde       +++++
+ecircumflextilde       +++++
+Edblgrave              +++++
+edblgrave              +++++
+Edieresis              +++++
+edieresis              +++++
+Edotaccent             +++++
+edotaccent             +++++
+Edotbelow              +++++
+edotbelow              +++++
+Egrave                 +++++
+egrave                 +++++
+Ehookabove             +++++
+ehookabove             +++++
+eight                  +++++
+eight.oldstyle         +++--
+eight.prop             +++--
+eight.taboldstyle      +++++
+ellipsis               +++++
+Emacron                +++++
+emacron                +++++
+emdash                 +++++
+endash                 +++++
+Eng                    +++++
+eng                    +++++
+Eogonek                +++++
+eogonek                +++++
+Eogonekacute           +++++
+eogonekacute           +++++
+Epsilon                +++++
+equal                  +++++
+Ereversed              +++++
+ereversed              +++++
+estimated              +++++
+Eta                    +++++
+Eth                    +++++
+eth                    +++++
+Etilde                 +++++
+etilde                 +++++
+eturned                +++++
+Euro                   +++++
+exclam                 +++++
+exclamdown             +++++
+F                      +++++
+f                      +++++
+f_k                    ++---
+ff                     ++---
+ffi                    ++---
+ffl                    ++---
+fi                     +++++
+five                   +++++
+five.oldstyle          +++--
+five.prop              +++--
+five.taboldstyle       +++++
+fl                     +++++
+florin                 +++++
+four                   +++++
+four.oldstyle          +++--
+four.prop              +++--
+four.taboldstyle       +++++
+fraction               +++++
+fraction.alt           +++++
+G                      +++++
+g                      +++++
+Gacute                 +++++
+gacute                 +++++
+Gamma                  +++++
+Gbreve                 +++++
+gbreve                 +++++
+Gcaron                 +++++
+gcaron                 +++++
+Gcedilla               +++++
+gcedilla               +++++
+Gcircumflex            +++++
+gcircumflex            +++++
+Gcommaaccent           +++++
+gcommaaccent           +++++
+Gdotaccent             +++++
+gdotaccent             +++++
+Germandbls             +++--
+germandbls             +++++
+germandbls.dup         +++++
+gnaborretni            +++++
+Grave                  +++++
+grave                  +++++
+grave.ts1              +++++
+Gravecomb              +++++
+gravecomb              +++++
+greater                +++++
+guarani                +++++
+guillemotleft          +++++
+guillemotright         +++++
+guilsinglleft          +++++
+guilsinglright         +++++
+H                      +++++
+h                      +++++
+Hbar                   +++++
+hbar                   +++++
+Hbrevebelow            +++++
+hbrevebelow            +++++
+Hcircumflex            +++++
+hcircumflex            +++++
+Hdieresis              +++++
+hdieresis              +++++
+Hdotbelow              +++++
+hdotbelow              +++++
+Hookabove              +++++
+hookabove              +++++
+Hookabovecomb          +++++
+hookabovecomb          +++++
+Htilde                 +++++
+htilde                 +++++
+Hungarumlaut           +++++
+hungarumlaut           +++++
+hungarumlaut.ts1       +++++
+Hungarumlautcomb       +++++
+hungarumlautcomb       +++++
+hyphen                 +++++
+hyphen.alt             +++++
+hyphen.dup             +++++
+hyphen.prop            +++--
+hyphendbl              +++++
+hyphendbl.alt          +++++
+I                      +++++
+i                      +++++
+Iacute                 +++++
+iacute                 +++++
+Ibreve                 +++++
+ibreve                 +++++
+Icaron                 +++++
+icaron                 +++++
+Icircumflex            +++++
+icircumflex            +++++
+Idblgrave              +++++
+idblgrave              +++++
+Idieresis              +++++
+idieresis              +++++
+Idieresisacute         +++++
+idieresisacute         +++++
+Idotaccent             +++++
+Idotbelow              +++++
+idotbelow              +++++
+Igrave                 +++++
+igrave                 +++++
+Ihookabove             +++++
+ihookabove             +++++
+IJ                     +++--
+ij                     +++--
+Imacron                +++++
+imacron                +++++
+Imacron.alt            +++++
+imacron.alt            +++++
+infinity               +++++
+interrobang            +++++
+Iogonek                +++++
+iogonek                +++++
+Iogonekacute           +++++
+iogonekacute           +++++
+Iota                   +++++
+Itilde                 +++++
+itilde                 +++++
+J                      +++++
+j                      +++++
+J_caron                +++++
+Jacute                 +++++
+jacute                 +++++
+jcaron                 +++++
+Jcircumflex            +++++
+jcircumflex            +++++
+K                      +++++
+k                      +++++
+Kappa                  +++++
+Kcedilla               +++++
+kcedilla               +++++
+Kcommaaccent           +++++
+kcommaaccent           +++++
+L                      +++++
+l                      +++++
+Lacute                 +++++
+lacute                 +++++
+Lambda                 +++++
+Lcaron                 +++++
+lcaron                 +++++
+Lcedilla               +++++
+lcedilla               +++++
+Lcommaaccent           +++++
+lcommaaccent           +++++
+Ldot                   +++++
+ldot                   +++++
+Ldotbelow              +++++
+ldotbelow              +++++
+Ldotbelowmacron        +++++
+ldotbelowmacron        +++++
+leaf                   +++++
+less                   +++++
+linebelow              +++++
+linebelowcomb          +++++
+lira                   +++++
+logicalnot             +++++
+longs                  ++-+-
+Lslash                 +++++
+lslash                 +++++
+Ltilde                 +++++
+ltilde                 +++++
+M                      +++++
+m                      +++++
+Macron                 +++++
+macron                 +++++
+Macron.alt             +++++
+macron.alt             +++++
+macron.dup             +++++
+macron.ts1             +++++
+macronbelow            +++++
+macronbelowcomb        +++++
+Macroncomb             +++++
+macroncomb             +++++
+married                +++++
+Mdotbelow              +++++
+mdotbelow              +++++
+mho                    +++++
+minus                  +++++
+Mu                     +++++
+mu                     +++++
+multiply               +++++
+musicalnote            +++++
+N                      +++++
+n                      +++++
+Nacute                 +++++
+nacute                 +++++
+naira                  +++++
+nbspace                +++++
+Ncaron                 +++++
+ncaron                 +++++
+Ncedilla               +++++
+ncedilla               +++++
+Ncommaaccent           +++++
+ncommaaccent           +++++
+Ndotaccent             +++++
+ndotaccent             +++++
+Ndotbelow              +++++
+ndotbelow              +++++
+nine                   +++++
+nine.oldstyle          +++--
+nine.prop              +++--
+nine.taboldstyle       +++++
+Ntilde                 +++++
+ntilde                 +++++
+Nu                     +++++
+numbersign             +++++
+numero                 +++++
+O                      +++++
+o                      +++++
+Oacute                 +++++
+oacute                 +++++
+Obreve                 +++++
+obreve                 +++++
+Ocaron                 +++++
+ocaron                 +++++
+Ocircumflex            +++++
+ocircumflex            +++++
+Ocircumflexacute       +++++
+ocircumflexacute       +++++
+Ocircumflexdotbelow    +++++
+ocircumflexdotbelow    +++++
+Ocircumflexgrave       +++++
+ocircumflexgrave       +++++
+Ocircumflexhookabove   +++++
+ocircumflexhookabove   +++++
+Ocircumflextilde       +++++
+ocircumflextilde       +++++
+Odblgrave              +++++
+odblgrave              +++++
+Odieresis              +++++
+odieresis              +++++
+Odotbelow              +++++
+odotbelow              +++++
+OE                     +++++
+oe                     +++++
+OE.dup                 +++++
+oe.dup                 +++++
+ogonek                 +++++
+Ograve                 +++++
+ograve                 +++++
+ohm                    +++++
+Ohookabove             +++++
+ohookabove             +++++
+Ohorn                  +++++
+ohorn                  +++++
+Ohornacute             +++++
+ohornacute             +++++
+Ohorndotbelow          +++++
+ohorndotbelow          +++++
+Ohorngrave             +++++
+ohorngrave             +++++
+Ohornhookabove         +++++
+ohornhookabove         +++++
+Ohorntilde             +++++
+ohorntilde             +++++
+Ohungarumlaut          +++++
+ohungarumlaut          +++++
+Omacron                +++++
+omacron                +++++
+Omega                  +++++
+Omicron                +++++
+one                    +++++
+one.oldstyle           +++--
+one.prop               +++--
+one.superior           +++++
+one.taboldstyle        +++++
+onehalf                +++++
+onequarter             +++++
+Oogonek                +++++
+oogonek                +++++
+Oogonekacute           +++++
+oogonekacute           +++++
+openbullet             +++++
+ordfeminine            +++++
+ordmasculine           +++++
+Orogate                +++++
+orogate                +++++
+Oslash                 +++++
+oslash                 +++++
+Oslash.dup             +++++
+oslash.dup             +++++
+Oslashacute            +++++
+oslashacute            +++++
+Otilde                 +++++
+otilde                 +++++
+P                      +++++
+p                      +++++
+paragraph              +++++
+paragraph.alt          +++++
+parenleft              +++++
+parenright             +++++
+percent                +++++
+period                 +++++
+periodcentered         +++++
+permyriad              +++--
+perthousand            +++++
+perthousandzero        +++++
+peso                   +++++
+Phi                    +++++
+Pi                     +++++
+plus                   +++++
+plusminus              +++++
+Psi                    +++++
+published              +++++
+Q                      +++++
+q                      +++++
+question               +++++
+questiondown           +++++
+quillbracketleft       +++++
+quillbracketright      +++++
+quotedbl               +++++
+quotedblbase           +++++
+quotedblbase.cm        +++++
+quotedblbase.cs        +++++
+quotedblbase.ts1       +++++
+quotedblleft           +++++
+quotedblleft.cm        +++++
+quotedblright          +++++
+quotedblright.cm       +++++
+quotedblright.cs       +++++
+quoteleft              +++++
+quoteleft.dup          +++++
+quoteright             +++++
+quoteright.dup         +++++
+quotesinglbase         +++++
+quotesinglbase.ts1     +++++
+quotesingle            +++++
+quotesingle.ts1        +++++
+R                      +++++
+r                      +++++
+Racute                 +++++
+racute                 +++++
+radical                +++++
+Rcaron                 +++++
+rcaron                 +++++
+Rcedilla               +++++
+rcedilla               +++++
+Rcommaaccent           +++++
+rcommaaccent           +++++
+Rdblgrave              +++++
+rdblgrave              +++++
+Rdotaccent             +++++
+rdotaccent             +++++
+Rdotbelow              +++++
+rdotbelow              +++++
+Rdotbelowmacron        +++++
+rdotbelowmacron        +++++
+recipe                 +++++
+referencemark          +++++
+registered             +++++
+registered.alt         +++++
+Rho                    +++++
+Ring                   +++++
+ring                   +++++
+Ringacute              +++++
+ringacute              +++++
+Ringcomb               +++++
+ringcomb               +++++
+ringhalfleft           +++++
+ringhalfright          +++++
+S                      +++++
+s                      +++++
+Sacute                 +++++
+sacute                 +++++
+Scaron                 +++++
+scaron                 +++++
+Scedilla               +++++
+scedilla               +++++
+schwa                  +++++
+Scircumflex            +++++
+scircumflex            +++++
+Scommaaccent           +++++
+scommaaccent           +++++
+Sdotbelow              +++++
+sdotbelow              +++++
+section                +++++
+semicolon              +++++
+servicemark            +++--
+seven                  +++++
+seven.oldstyle         +++--
+seven.prop             +++--
+seven.taboldstyle      +++++
+sfthyphen              +++++
+Sigma                  +++++
+six                    +++++
+six.oldstyle           +++--
+six.prop               +++--
+six.taboldstyle        +++++
+slash                  +++++
+space                  +++++
+sterling               +++++
+suppress               +++--
+T                      +++++
+t                      +++++
+Tau                    +++++
+Tcaron                 +++++
+tcaron                 +++++
+Tcedilla               +++++
+tcedilla               +++++
+Tcommaaccent           +++++
+tcommaaccent           +++++
+Tdieresis              +++++
+tdieresis              +++++
+Tdotbelow              +++++
+tdotbelow              +++++
+Theta                  +++++
+Thorn                  +++++
+thorn                  +++++
+three                  +++++
+three.oldstyle         +++--
+three.prop             +++--
+three.superior         +++++
+three.taboldstyle      +++++
+threequarters          +++++
+threequartersemdash    +++++
+tie                    +++++
+tieaccentcapital       +++++
+tieaccentcapital.new   +++++
+tieaccentlowercase     +++++
+tieaccentlowercase.new +++++
+Tilde                  +++++
+tilde                  +++++
+tilde.dup              +++++
+tildebelow             +++++
+tildebelowcomb         +++++
+Tildecomb              +++++
+tildecomb              +++++
+tildelow               +++++
+Tlinebelow             +++++
+tlinebelow             +++++
+trademark              +++--
+Ttilde                 +++++
+ttilde                 +++++
+twelveudash            +++++
+two                    +++++
+two.oldstyle           +++--
+two.prop               +++--
+two.superior           +++++
+two.taboldstyle        +++++
+U                      +++++
+u                      +++++
+Uacute                 +++++
+uacute                 +++++
+Ubreve                 +++++
+ubreve                 +++++
+Ubrevebelowinverted    +++++
+ubrevebelowinverted    +++++
+Ucaron                 +++++
+ucaron                 +++++
+Ucircumflex            +++++
+ucircumflex            +++++
+Udblgrave              +++++
+udblgrave              +++++
+Udieresis              +++++
+udieresis              +++++
+Udieresisacute         +++++
+udieresisacute         +++++
+Udieresiscaron         +++++
+udieresiscaron         +++++
+Udieresisgrave         +++++
+udieresisgrave         +++++
+Udotbelow              +++++
+udotbelow              +++++
+Ugrave                 +++++
+ugrave                 +++++
+Uhookabove             +++++
+uhookabove             +++++
+Uhorn                  +++++
+uhorn                  +++++
+Uhornacute             +++++
+uhornacute             +++++
+Uhorndotbelow          +++++
+uhorndotbelow          +++++
+Uhorngrave             +++++
+uhorngrave             +++++
+Uhornhookabove         +++++
+uhornhookabove         +++++
+Uhorntilde             +++++
+uhorntilde             +++++
+Uhungarumlaut          +++++
+uhungarumlaut          +++++
+Umacron                +++++
+umacron                +++++
+underscore             +++++
+undertie               +++++
+undertieinverted       +++++
+uni2010                +++++
+uni2011                +++++
+uni2423                +++++
+Uogonek                +++++
+uogonek                +++++
+Upsilon                +++++
+Uring                  +++++
+uring                  +++++
+Utilde                 +++++
+utilde                 +++++
+V                      +++++
+v                      +++++
+varcopyright           +++--
+vardotaccent           +++++
+varI                   +----
+varIJ                  +----
+varIogonek             +----
+varregistered          +++--
+W                      +++++
+w                      +++++
+Wacute                 +++++
+wacute                 +++++
+Wcircumflex            +++++
+wcircumflex            +++++
+Wdieresis              +++++
+wdieresis              +++++
+Wgrave                 +++++
+wgrave                 +++++
+won                    +++++
+X                      +++++
+x                      +++++
+Xi                     +++++
+Y                      +++++
+y                      +++++
+Yacute                 +++++
+yacute                 +++++
+Ycircumflex            +++++
+ycircumflex            +++++
+Ydieresis              +++++
+ydieresis              +++++
+Ydotbelow              +++++
+ydotbelow              +++++
+yen                    +++++
+Ygrave                 +++++
+ygrave                 +++++
+Yhookabove             +++++
+yhookabove             +++++
+Ytilde                 +++++
+ytilde                 +++++
+Z                      +++++
+z                      +++++
+Zacute                 +++++
+zacute                 +++++
+Zcaron                 +++++
+zcaron                 +++++
+Zdotaccent             +++++
+zdotaccent             +++++
+Zdotbelow              +++++
+zdotbelow              +++++
+zero                   +++++
+zero.oldstyle          +++--
+zero.prop              +++--
+zero.slash             +++++
+zero.taboldstyle       +++++
+Zeta                   +++++
