@@ -20,7 +20,16 @@ function filter(field, value) {
 
 function updateBucket() {
     var newList = "",
-        code = "<link rel=\"stylesheet\" href=\"\/\/brick.a.ssl.fastly.net";
+        code = "<link rel=\"stylesheet\" href=\"\/\/brick.a.ssl.fastly.net",
+        size = Object.keys(bucket).length;
+
+    document.getElementById("bucket-num").innerText = size + ((size === 1) ? " font" : " fonts");
+    document.getElementById("bucket-list").setAttribute("data-count", size);
+
+    if (size === 0) {
+        document.getElementById("bucket").className = "hidden";
+        return;
+    }
 
     // Formulate new DOM values
     for (var i in bucket) {
@@ -43,8 +52,6 @@ function updateBucket() {
     }
 
     // Replace necessary DOM element values
-    document.getElementById("bucket-num").innerText = Object.keys(bucket).length + ((Object.keys(bucket).length === 1) ? " font" : " fonts");
-    document.getElementById("bucket-list").setAttribute("data-count", Object.keys(bucket).length);
     document.getElementById("bucket").querySelector("ul").innerHTML = newList;
     document.getElementById("code").innerText = (code.substr(-4) === ".net") ? "" : code + "\">";
 }
