@@ -250,11 +250,11 @@ section {
         }
     }
 }
+
 #bucket {
     background: @accent;
     padding: 2em 0;
     font-size: 0.75em;
-    //display: none;
     ul {
         margin: 0;
         padding: 0;
@@ -322,23 +322,12 @@ section {
         box-sizing: border-box;
         margin: 0 2.5% 25px 0;
         position: relative;
-        &:nth-child(5n) {
+        &.row-end {
             margin-right: 0;
         }
         &.hidden {
             display: none;
         }
-        /* &:hover:after {
-            content: ' ';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.25);
-            top: 0;
-            left: 0;
-            cursor: pointer;
-            pointer-events: none;
-        } */
     }
     .preview {
         height: 120px;
@@ -375,6 +364,10 @@ section {
             font-size: 0.8em;
             margin: 0;
             padding: 0;
+            overflow: hidden;
+            max-width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         span {
             font-size: 0.75em;

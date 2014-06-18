@@ -16,6 +16,10 @@ function filter(field, value) {
             el.className = "font";
         }
     });
+    document.getElementById("fonts").querySelectorAll(".font:not(.hidden)").forEach(function(el, i) {
+        if (i % 5 == 4)
+            el.className = "font row-end";
+    });
 }
 
 function updateBucket() {
@@ -134,3 +138,6 @@ window.onscroll = function() {
         picker.className = "";
     }
 }
+
+// Initial row formatting
+filter("class", false);
