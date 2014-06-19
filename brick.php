@@ -9,9 +9,9 @@ layout: none
 
 // Catalogue array
 $catalogue = array(
-    {% for font in site.data.fonts %}
-    "{{ font[0] }}" => array(
-        {% for style in font[1].styles %}
+    {% for font in site.fonts %}
+    "{{ font.name }}" => array(
+        {% for style in font.styles %}
         "{{ style[0] }}" => "{{ style[1] }}"{% unless forloop.last %},{% endunless %}
         {% endfor %}
     ){% unless forloop.last %},{% endunless %}
