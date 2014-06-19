@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Font catalogue &middot; Brick</title>
+	<meta name="description" content="Brick is an open-source webfont service that serves fonts in their original form for high quality rendering across all browsers.">
+	<link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400/Open+Sans:400/Latin+Modern+Mono:400">
+	<link rel="stylesheet" href="/assets/css/main.min.css">
+	
+</head>
+<body>
+	<header class="page">
+		<div class="width">
+			<a href="/"><h1>Brick</h1></a>
+			<nav>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/fonts">Catalogue</a></li>
+					<li><a href="https://github.com/alfredxing/brick/wiki/Usage">Usage</a></li>
+					<li><a href="https://github.com/alfredxing/brick">GitHub</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div id="picker">
+    <div id="filters" class="width">
+        <span class="helper"></span>
+        <fieldset>
+            <label>Class</label>
+            <ul>
+                <li class="option" data-field="class" data-option="serif">Serif</li>
+                <li class="option" data-field="class" data-option="sans">Sans</li>
+                <li class="option" data-field="class" data-option="mono">Mono</li>
+                <li class="option" data-field="class" data-option="slab">Slab</li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <label>Usage</label>
+            <ul>
+                <li class="option" data-field="usage" data-option="body">Body</li>
+                <li class="option" data-field="usage" data-option="display">Display</li>
+            </ul>
+        </fieldset>
+        <fieldset id="bucket-list" data-count="0">
+            <label><span id="bucket-num">0 fonts</span> in bucket</label>
+        </fieldset>
+    </div>
+    <div id="bucket" class="hidden">
+        <div class="width">
+            <ul></ul>
+            <label>Generated code:</label>
+            <textarea id="code" readonly></textarea>
+        </div>
+    </div>
+</div>
+<section id="catalogue" class="width">
+    <ul id="fonts">
+        
+            
+            
+            <li data-class="serif" data-usage="body" class="font">
+                <a href="./alegreya" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./alegreya/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./alegreya" target="_blank"><h1>Alegreya</h1></a>
+                    <span>6 styles</span>
+                    <span href="#" class="add" data-font="Alegreya" data-styles="400,400i,700,700i,900,900i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./alegreyasans" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./alegreyasans/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./alegreyasans" target="_blank"><h1>Alegreya Sans</h1></a>
+                    <span>14 styles</span>
+                    <span href="#" class="add" data-font="Alegreya Sans" data-styles="200,200i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="slab" data-usage="body" class="font">
+                <a href="./aleo" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./aleo/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./aleo" target="_blank"><h1>Aleo</h1></a>
+                    <span>6 styles</span>
+                    <span href="#" class="add" data-font="Aleo" data-styles="300,300i,400,400i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="serif" data-usage="body" class="font">
+                <a href="./andada" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./andada/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./andada" target="_blank"><h1>Andada</h1></a>
+                    <span>4 styles</span>
+                    <span href="#" class="add" data-font="Andada" data-styles="400,400i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="mono" data-usage="body" class="font">
+                <a href="./anonymouspro" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./anonymouspro/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./anonymouspro" target="_blank"><h1>Anonymous Pro</h1></a>
+                    <span>4 styles</span>
+                    <span href="#" class="add" data-font="Anonymous Pro" data-styles="400,400i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="slab" data-usage="body" class="font">
+                <a href="./bitter" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./bitter/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./bitter" target="_blank"><h1>Bitter</h1></a>
+                    <span>4 styles</span>
+                    <span href="#" class="add" data-font="Bitter" data-styles="400,400i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./clearsans" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./clearsans/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./clearsans" target="_blank"><h1>Clear Sans</h1></a>
+                    <span>8 styles</span>
+                    <span href="#" class="add" data-font="Clear Sans" data-styles="200,300,400,400i,500,500i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./comicneue" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./comicneue/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./comicneue" target="_blank"><h1>Comic Neue</h1></a>
+                    <span>6 styles</span>
+                    <span href="#" class="add" data-font="Comic Neue" data-styles="300,300i,400,400i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="serif" data-usage="body" class="font">
+                <a href="./crimson" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./crimson/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./crimson" target="_blank"><h1>Crimson</h1></a>
+                    <span>6 styles</span>
+                    <span href="#" class="add" data-font="Crimson" data-styles="400,400i,600,600i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="serif" data-usage="body" class="font">
+                <a href="./domine" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./domine/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./domine" target="_blank"><h1>Domine</h1></a>
+                    <span>2 styles</span>
+                    <span href="#" class="add" data-font="Domine" data-styles="400,700">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="serif" data-usage="body" class="font">
+                <a href="./droidserif" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./droidserif/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./droidserif" target="_blank"><h1>Droid Serif</h1></a>
+                    <span>4 styles</span>
+                    <span href="#" class="add" data-font="Droid Serif" data-styles="400,400i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="serif" data-usage="body" class="font">
+                <a href="./ebgaramond" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./ebgaramond/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./ebgaramond" target="_blank"><h1>EB Garamond</h1></a>
+                    <span>2 styles</span>
+                    <span href="#" class="add" data-font="EB Garamond" data-styles="400,400i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./firasans" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./firasans/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./firasans" target="_blank"><h1>Fira Sans</h1></a>
+                    <span>8 styles</span>
+                    <span href="#" class="add" data-font="Fira Sans" data-styles="300,300i,400,400i,500,500i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="serif" data-usage="body" class="font">
+                <a href="./gentiumbasic" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./gentiumbasic/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./gentiumbasic" target="_blank"><h1>Gentium Basic</h1></a>
+                    <span>4 styles</span>
+                    <span href="#" class="add" data-font="Gentium Basic" data-styles="400,400i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="mono" data-usage="body" class="font">
+                <a href="./inconsolata" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./inconsolata/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./inconsolata" target="_blank"><h1>Inconsolata</h1></a>
+                    <span>1 styles</span>
+                    <span href="#" class="add" data-font="Inconsolata" data-styles="500">+</span>
+                </article>
+            </li>
+            
+        
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./karla" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./karla/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./karla" target="_blank"><h1>Karla</h1></a>
+                    <span>4 styles</span>
+                    <span href="#" class="add" data-font="Karla" data-styles="400,400i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="mono" data-usage="body" class="font">
+                <a href="./latinmodernmono" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./latinmodernmono/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./latinmodernmono" target="_blank"><h1>Latin Modern Mono</h1></a>
+                    <span>6 styles</span>
+                    <span href="#" class="add" data-font="Latin Modern Mono" data-styles="300,300i,400,400i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="serif" data-usage="body" class="font">
+                <a href="./latinmodernroman" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./latinmodernroman/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./latinmodernroman" target="_blank"><h1>Latin Modern Roman</h1></a>
+                    <span>4 styles</span>
+                    <span href="#" class="add" data-font="Latin Modern Roman" data-styles="400,400i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./lato" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./lato/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./lato" target="_blank"><h1>Lato</h1></a>
+                    <span>18 styles</span>
+                    <span href="#" class="add" data-font="Lato" data-styles="100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="serif" data-usage="body" class="font">
+                <a href="./librebaskerville" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./librebaskerville/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./librebaskerville" target="_blank"><h1>Libre Baskerville</h1></a>
+                    <span>3 styles</span>
+                    <span href="#" class="add" data-font="Libre Baskerville" data-styles="400,400i,700">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="serif" data-usage="display" class="font">
+                <a href="./librecaslondisplay" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./librecaslondisplay/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./librecaslondisplay" target="_blank"><h1>Libre Caslon Display</h1></a>
+                    <span>1 styles</span>
+                    <span href="#" class="add" data-font="Libre Caslon Display" data-styles="400">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="serif" data-usage="body" class="font">
+                <a href="./librecaslontext" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./librecaslontext/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./librecaslontext" target="_blank"><h1>Libre Caslon Text</h1></a>
+                    <span>3 styles</span>
+                    <span href="#" class="add" data-font="Libre Caslon Text" data-styles="400,400i,700">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./linuxbiolinum" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./linuxbiolinum/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./linuxbiolinum" target="_blank"><h1>Linux Biolinum</h1></a>
+                    <span>3 styles</span>
+                    <span href="#" class="add" data-font="Linux Biolinum" data-styles="400,400i,700">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="serif" data-usage="body" class="font">
+                <a href="./linuxlibertine" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./linuxlibertine/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./linuxlibertine" target="_blank"><h1>Linux Libertine</h1></a>
+                    <span>6 styles</span>
+                    <span href="#" class="add" data-font="Linux Libertine" data-styles="400,400i,600,600i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="serif" data-usage="body" class="font">
+                <a href="./merriweather" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./merriweather/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./merriweather" target="_blank"><h1>Merriweather</h1></a>
+                    <span>8 styles</span>
+                    <span href="#" class="add" data-font="Merriweather" data-styles="200,200i,400,400i,700,700i,900,900i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./montserrat" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./montserrat/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./montserrat" target="_blank"><h1>Montserrat</h1></a>
+                    <span>2 styles</span>
+                    <span href="#" class="add" data-font="Montserrat" data-styles="400,700">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./notosans" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./notosans/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./notosans" target="_blank"><h1>Noto Sans</h1></a>
+                    <span>4 styles</span>
+                    <span href="#" class="add" data-font="Noto Sans" data-styles="400,400i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="serif" data-usage="body" class="font">
+                <a href="./notoserif" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./notoserif/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./notoserif" target="_blank"><h1>Noto Serif</h1></a>
+                    <span>4 styles</span>
+                    <span href="#" class="add" data-font="Noto Serif" data-styles="400,400i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="serif" data-usage="display" class="font">
+                <a href="./oldstandard" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./oldstandard/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./oldstandard" target="_blank"><h1>Old Standard</h1></a>
+                    <span>3 styles</span>
+                    <span href="#" class="add" data-font="Old Standard" data-styles="400,400i,700">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./opensans" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./opensans/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./opensans" target="_blank"><h1>Open Sans</h1></a>
+                    <span>10 styles</span>
+                    <span href="#" class="add" data-font="Open Sans" data-styles="300,300i,400,400i,600,600i,700,700i,900,900i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="display" class="font">
+                <a href="./oswald" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./oswald/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./oswald" target="_blank"><h1>Oswald</h1></a>
+                    <span>14 styles</span>
+                    <span href="#" class="add" data-font="Oswald" data-styles="200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="serif" data-usage="display" class="font">
+                <a href="./playfairdisplay" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./playfairdisplay/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./playfairdisplay" target="_blank"><h1>Playfair Display</h1></a>
+                    <span>6 styles</span>
+                    <span href="#" class="add" data-font="Playfair Display" data-styles="400,400i,700,700i,900,900i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./ptsans" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./ptsans/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./ptsans" target="_blank"><h1>PT Sans</h1></a>
+                    <span>4 styles</span>
+                    <span href="#" class="add" data-font="PT Sans" data-styles="400,400i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="serif" data-usage="body" class="font">
+                <a href="./ptserif" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./ptserif/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./ptserif" target="_blank"><h1>PT Serif</h1></a>
+                    <span>4 styles</span>
+                    <span href="#" class="add" data-font="PT Serif" data-styles="400,400i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./raleway" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./raleway/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./raleway" target="_blank"><h1>Raleway</h1></a>
+                    <span>18 styles</span>
+                    <span href="#" class="add" data-font="Raleway" data-styles="100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./roboto" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./roboto/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./roboto" target="_blank"><h1>Roboto</h1></a>
+                    <span>12 styles</span>
+                    <span href="#" class="add" data-font="Roboto" data-styles="200,200i,300,300i,400,400i,500,500i,700,700i,900,900i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./robotocondensed" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./robotocondensed/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./robotocondensed" target="_blank"><h1>Roboto Condensed</h1></a>
+                    <span>6 styles</span>
+                    <span href="#" class="add" data-font="Roboto Condensed" data-styles="300,300i,400,400i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="slab" data-usage="body" class="font">
+                <a href="./robotoslab" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./robotoslab/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./robotoslab" target="_blank"><h1>Roboto Slab</h1></a>
+                    <span>4 styles</span>
+                    <span href="#" class="add" data-font="Roboto Slab" data-styles="200,300,400,700">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="mono" data-usage="body" class="font">
+                <a href="./sourcecodepro" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./sourcecodepro/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./sourcecodepro" target="_blank"><h1>Source Code Pro</h1></a>
+                    <span>7 styles</span>
+                    <span href="#" class="add" data-font="Source Code Pro" data-styles="200,300,400,500,600,700,900">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./sourcesanspro" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./sourcesanspro/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./sourcesanspro" target="_blank"><h1>Source Sans Pro</h1></a>
+                    <span>12 styles</span>
+                    <span href="#" class="add" data-font="Source Sans Pro" data-styles="200,200i,300,300i,400,400i,600,600i,700,700i,900,900i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="serif" data-usage="body" class="font">
+                <a href="./sourceserifpro" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./sourceserifpro/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./sourceserifpro" target="_blank"><h1>Source Serif Pro</h1></a>
+                    <span>3 styles</span>
+                    <span href="#" class="add" data-font="Source Serif Pro" data-styles="400,600,700">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./telex" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./telex/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./telex" target="_blank"><h1>Telex</h1></a>
+                    <span>1 styles</span>
+                    <span href="#" class="add" data-font="Telex" data-styles="400">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./texgyreheros" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./texgyreheros/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./texgyreheros" target="_blank"><h1>TeX Gyre Heros</h1></a>
+                    <span>4 styles</span>
+                    <span href="#" class="add" data-font="TeX Gyre Heros" data-styles="400,400i,700,700i">+</span>
+                </article>
+            </li>
+            
+        
+            
+            
+            <li data-class="sans" data-usage="body" class="font">
+                <a href="./titillium" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./titillium/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./titillium" target="_blank"><h1>Titillium</h1></a>
+                    <span>11 styles</span>
+                    <span href="#" class="add" data-font="Titillium" data-styles="200,200i,300,300i,400,400i,600,600i,700,700i,900">+</span>
+                </article>
+            </li>
+            
+        
+    </ul>
+</section>
+<script src="/assets/js/catalogue.js"></script>
+	<footer class="width">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/fonts">Catalogue</a></li>
+                <li><a href="https://github.com/alfredxing/brick/wiki/Usage">Usage</a></li>
+                <li><a href="https://github.com/alfredxing/brick">GitHub</a></li>
+            </ul>
+        </nav>
+        <p>Copyright &copy; MMXIV <a href="http://alfredxing.com" target="_blank">Alfred Xing</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;Fonts are copyright of their respective authors.</p>
+    </footer>
+    <script>
+        (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date;a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-49018263-1","brick.im");ga("require","displayfeatures");ga("send","pageview");
+    </script>
+</body>
+</html>
