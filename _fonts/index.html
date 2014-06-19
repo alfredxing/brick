@@ -1,0 +1,57 @@
+---
+layout: page
+title: Font catalogue
+---
+<div id="picker">
+    <div id="filters" class="width">
+        <span class="helper"></span>
+        <fieldset>
+            <label>Class</label>
+            <ul>
+                <li class="option" data-field="class" data-option="serif">Serif</li>
+                <li class="option" data-field="class" data-option="sans">Sans</li>
+                <li class="option" data-field="class" data-option="mono">Mono</li>
+                <li class="option" data-field="class" data-option="slab">Slab</li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <label>Usage</label>
+            <ul>
+                <li class="option" data-field="usage" data-option="body">Body</li>
+                <li class="option" data-field="usage" data-option="display">Display</li>
+            </ul>
+        </fieldset>
+        <fieldset id="bucket-list" data-count="0">
+            <label><span id="bucket-num">0 fonts</span> in bucket</label>
+        </fieldset>
+    </div>
+    <div id="bucket" class="hidden">
+        <div class="width">
+            <ul></ul>
+            <label>Generated code:</label>
+            <textarea id="code" readonly></textarea>
+        </div>
+    </div>
+</div>
+<section id="catalogue" class="width">
+    <ul id="fonts">
+        {% for font in site.fonts %}
+            {% unless font.layout == 'page' %}
+            {% assign id = font.name | replace: ' ', '' | downcase %}
+            <li data-class="{{ font.class }}" data-usage="{{ font.use }}" class="font">
+                <a href="./{{ id }}" target="_blank">
+                    <div class="preview">
+                        <span class="helper"></span><img src="./{{ id }}/specimen.png" alt="EB Garamond specimen">
+                    </div>
+                </a>
+                <article>
+                    <a href="./{{ id }}" target="_blank"><h1>{{ font.name }}</h1></a>
+                    <span>{{ font.styles.size }} styles</span>
+                    <span href="#" class="add" data-font="{{ font.name }}" data-styles="{% for style in font.styles %}{{ style[0] }}{% unless forloop.last %},{% endunless %}{% endfor %}">+</span>
+                </article>
+            </li>
+            {% endunless %}
+        {% endfor %}
+    </ul>
+</section>
+<script src="/assets/js/catalogue.js"></script>
