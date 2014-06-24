@@ -307,9 +307,7 @@ section {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    font-size: 0;
     li {
-        font-size: 16pt;
         display: inline-block;
         vertical-align: top;
         text-align: center;
@@ -322,6 +320,7 @@ section {
         box-sizing: border-box;
         margin: 0 2.5% 25px 0;
         position: relative;
+        float: left;
         &.row-end {
             margin-right: 0;
         }
@@ -393,6 +392,11 @@ section {
                 background: darken(desaturate(@accent, 20%), 10%);
             }
         }
+    }
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
     }
 }
 
