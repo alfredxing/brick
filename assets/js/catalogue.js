@@ -27,7 +27,7 @@ function updateBucket() {
         code = "<link rel=\"stylesheet\" href=\"\/\/brick.a.ssl.fastly.net",
         size = Object.keys(bucket).length;
 
-    document.getElementById("bucket-num").innerText = size + ((size === 1) ? " font" : " fonts");
+    document.getElementById("bucket-num").textContent = size + ((size === 1) ? " font" : " fonts");
     document.getElementById("bucket-list").setAttribute("data-count", size);
 
     if (size === 0) {
@@ -57,7 +57,7 @@ function updateBucket() {
 
     // Replace necessary DOM element values
     document.getElementById("bucket").querySelector("ul").innerHTML = newList;
-    document.getElementById("code").innerText = (code.substr(-4) === ".net") ? "" : code + "\">";
+    document.getElementById("code").textContent = (code.substr(-4) === ".net") ? "" : code + "\">";
 }
 
 // Event listeners
@@ -86,7 +86,7 @@ document.getElementById("fonts").onclick = function(e) {
             delete bucket[this.getAttribute("data-font")];
             updateBucket();
             this.className = "add";
-            this.innerText = "+";
+            this.textContent = "+";
         } else {
             var styles = this.getAttribute("data-styles").split(",");
             var font = bucket[this.getAttribute("data-font")] = {};
@@ -95,7 +95,7 @@ document.getElementById("fonts").onclick = function(e) {
             }
             updateBucket();
             this.className = "add added";
-            this.innerText = "-";
+            this.textContent = "-";
         }
     }).call(e.target);
 }
@@ -103,7 +103,7 @@ document.getElementById("fonts").onclick = function(e) {
 document.getElementById("bucket").onclick = function(e) {
     if (e.target.tagName.toLowerCase() !== "span") return;
     (function () {
-            var weight = this.innerText, font = this.getAttribute("data-font");
+            var weight = this.textContent, font = this.getAttribute("data-font");
         if (this.getAttribute("data-in") !== null) {
             bucket[font][weight] = false;
         } else {
