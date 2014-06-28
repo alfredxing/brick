@@ -39,7 +39,7 @@ title: Font catalogue
             {% unless font.layout == 'page' %}
             {% assign id = font.name | replace: ' ', '' | downcase %}
             <li data-class="{{ font.class }}" data-usage="{{ font.use }}" class="font">
-                <a href="./{{ id }}" target="_blank">
+                <a href="./{{ id }}/" target="_blank">
                     <div class="preview">
                         <span class="helper"></span><img src="./{{ id }}/specimen.png" alt="EB Garamond specimen">
                     </div>
