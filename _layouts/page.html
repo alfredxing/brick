@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400/Open+Sans:400/Latin+Modern+Mono:400">
 	<link rel="stylesheet" href="/assets/css/main.min.css">
 	{% if page.name %}
-	<link rel="stylesheet" type="text/css" href="//brick.a.ssl.fastly.net/{{ page.name }}:{% for style in page.styles %}{{ style[0] }}{% unless forloop.last %},{% endunless %}{% endfor %}">
+	<link rel="stylesheet" type="text/css" href="//brick.a.ssl.fastly.net/{{ page.name }}:{% for style in page.styles %}{{ style[0] }}{% unless forloop.last %},{% endunless %}{% endfor %}:f">
 	<style type="text/css">#preview, #preview *{font-family:"{{ page.name }}"}</style>
 	{% endif %}
 </head>
