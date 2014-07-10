@@ -8,7 +8,7 @@ layout: none
  */
 
 // Catalogue array
-{% assign fonts = site.pages | sort: 'family' %}
+{% assign fonts = site.pages %}
 $catalogue = array(
     {% for font in fonts %}
     {% if font.layout == "font" %}

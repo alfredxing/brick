@@ -35,7 +35,7 @@ title: Font catalogue
 </div>
 <section id="catalogue" class="width">
     <ul id="fonts">
-        {% assign fonts = site.pages | sort: 'family' %}
+        {% assign fonts = site.pages %}
         {% for font in fonts %}
             {% if font.layout == 'font' %}
             {% assign id = font.family | replace: ' ', '' | downcase %}
@@ -48,7 +48,7 @@ title: Font catalogue
                 <article>
                     <a href="./{{ id }}" target="_blank"><h1>{{ font.family }}</h1></a>
                     <span>{{ font.styles.size }} styles</span>
-                    <span href="#" class="add" data-font="{{ font.name }}" data-styles="{% for style in font.styles %}{{ style[0] }}{% unless forloop.last %},{% endunless %}{% endfor %}">+</span>
+                    <span href="#" class="add" data-font="{{ font.family }}" data-styles="{% for style in font.styles %}{{ style[0] }}{% unless forloop.last %},{% endunless %}{% endfor %}">+</span>
                 </article>
             </li>
             {% endif %}
