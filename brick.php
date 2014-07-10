@@ -8,13 +8,16 @@ layout: none
  */
 
 // Catalogue array
+{% assign fonts = site.pages | sort: 'family' %}
 $catalogue = array(
-    {% for font in site.fonts %}
-    "{{ font.name }}" => array(
+    {% for font in fonts %}
+    {% if font.layout == "font" %}
+    "{{ font.family }}" => array(
         {% for style in font.styles %}
         "{{ style[0] }}" => "{{ style[1] }}"{% unless forloop.last %},{% endunless %}
         {% endfor %}
     ){% unless forloop.last %},{% endunless %}
+    {% endif %}
     {% endfor %}
 );
 
