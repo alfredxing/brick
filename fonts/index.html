@@ -35,7 +35,7 @@ title: Font catalogue
 </div>
 <section id="catalogue" class="width">
     <ul id="fonts">
-        {% assign fonts = site.pages %}
+        {% assign fonts = site.pages | sort: 'family' %}
         {% for font in fonts %}
             {% if font.layout == 'font' %}
             {% assign id = font.family | replace: ' ', '' | downcase %}
