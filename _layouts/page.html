@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{% if page.title %}{{ page.title }}{% else %}{{ page.name }}{% endif %} &middot; Brick</title>
-	<meta name="description" content="Brick is an open-source webfont service that serves fonts in their original form for high quality rendering across all browsers.">
+	<title>{% if page.title %}{{ page.title }}{% else %}{{ page.family }}{% endif %} &middot; Brick</title>
+	<meta name="description" content="{% if page.family %}Preview {{ page.family }}'s weights and styles from the Brick catalogue.{% endif %}{{ page.description }}">
 	<link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400/Open+Sans:400/Latin+Modern+Mono:400">
 	<link rel="stylesheet" href="/assets/css/main.min.css">
-	{% if page.name %}
-	<link rel="stylesheet" type="text/css" href="//brick.a.ssl.fastly.net/{{ page.name }}:{% for style in page.styles %}{{ style[0] }}{% unless forloop.last %},{% endunless %}{% endfor %}">
-	<style type="text/css">#preview, #preview *{font-family:"{{ page.name }}"}</style>
+	{% if page.family %}
+	<link rel="stylesheet" type="text/css" href="//brick.a.ssl.fastly.net/{{ page.family }}:{% for style in page.styles %}{{ style[0] }}{% unless forloop.last %},{% endunless %}{% endfor %}:f">
+	<style type="text/css">#preview, #preview *{font-family:"{{ page.family }}"}</style>
 	{% endif %}
 </head>
 <body>
