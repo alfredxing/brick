@@ -14,7 +14,8 @@
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
-  {% for font in site.fonts %}
+  {% assign fonts = site.pages | sort: 'dir' %}
+  {% for font in fonts %}
     <url>
       <loc>http://brick.im/fonts/{{ font.name | replace: ' ', '' | downcase }}/</loc>
       <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
