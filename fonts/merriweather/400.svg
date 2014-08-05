@@ -1,10 +1,15 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
-<svg>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
 <metadata>
 Created by FontForge 20120731 at Fri Aug  1 16:50:30 2014
  By Alfred Xing
-Copyright (c) 2011, Sorkin Type Co (www.sorkintype.com)with Reserved Font Name "Merriweather".This Font Software is licensed under the SIL Open Font License,Version 1.1. This license is available with a FAQ at:http://scripts.sil.org/OFL
+Copyright (c) 2011, Sorkin Type Co (www.sorkintype.com)
+with Reserved Font Name "Merriweather".
+
+This Font Software is licensed under the SIL Open Font License,
+Version 1.1. This license is available with a FAQ at:
+http://scripts.sil.org/OFL
 </metadata>
 <defs>
 <font id="Merriweather" horiz-adv-x="0" >
