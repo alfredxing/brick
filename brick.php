@@ -31,6 +31,8 @@ header('Pragma: Public');
 
 // Template
 $BASE = "@font-face{font-family:'%s';font-style:%s;font-weight:%s;src:%s}";
+$BASESVG = $BASE
+         . "@media screen and (-webkit-min-device-pixel-ratio:0){@font-face{font-family:'%s';font-style:%s;font-weight:%s;src:%s}}";
 
 $query = explode("/", preg_replace("/\/$|^\//", "", urldecode($_SERVER['REQUEST_URI'])));
 
@@ -54,14 +56,30 @@ foreach ($query as $key=>$val) {
               . $weight
               . ".woff";
 
+        $svg = "//brick.a.ssl.fastly.net/fonts/"
+              . strtolower(str_replace(" ", '', $family))
+              . "/"
+              . $weight
+              . ".svg"
+              . "#"
+              . strtolower(str_replace(" ", '', $family));
+
+
         // Start with no URI's
         $uri = '';
+        $urisvg = '';
 
         // Process flags
         if (strpos($flags, 'f') === false) {
             $local = $catalogue[$family][$weight];
             $uri .= "local('" . $local . "'),";
         }
+
+        if (strpos($flags, 's') === true) {
+            $urisvg = $uri;
+            $urisvg .= "url(" . $svg . ") format('svg')";
+        }
+
         // Add font URL
         $uri .= "url(" . $woff . ") format('woff')";
         
@@ -72,7 +90,12 @@ foreach ($query as $key=>$val) {
             $style = 'normal';
         }
 
-        echo sprintf($BASE, $family, $style, $weight, $uri);
+        if (empty($urisvg)) {
+            echo sprintf($BASE, $family, $style, $weight, $uri);
+        } else {
+            echo sprintf($BASESVG, $family, $style, $weight, $uri, $family, $style, $weight, $urisvg);
+        }
+        
     }
 }
 
