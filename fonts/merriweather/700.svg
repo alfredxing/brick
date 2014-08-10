@@ -12,7 +12,7 @@ Version 1.1. This license is available with a FAQ at:
 http://scripts.sil.org/OFL
 </metadata>
 <defs>
-<font id="Merriweather-Bold" horiz-adv-x="0" >
+<font id="merriweather" horiz-adv-x="0" >
   <font-face 
     font-family="Merriweather"
     font-weight="700"

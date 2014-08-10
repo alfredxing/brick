@@ -7,7 +7,7 @@ Created by FontForge 20120731 at Fri Aug  1 16:50:28 2014
 Libre Baskerville is webfont optimized for web body text (typically 16px). It's based on 1941 ATF Specimens, but it has a taller x height, wider counters and minor contrast that allow it to work on small sizes in any screen.
 </metadata>
 <defs>
-<font id="LibreBaskerville-Regular" horiz-adv-x="670" >
+<font id="librebaskerville" horiz-adv-x="670" >
   <font-face 
     font-family="Libre Baskerville"
     font-weight="400"

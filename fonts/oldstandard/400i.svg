@@ -10,7 +10,7 @@ This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is available with a FAQ at: http://scripts.sil.org/OFL
 </metadata>
 <defs>
-<font id="OldStandard-Italic" horiz-adv-x="0" >
+<font id="oldstandard" horiz-adv-x="0" >
   <font-face 
     font-family="Old Standard"
     font-weight="400"
