@@ -40,7 +40,7 @@ function updateBucket() {
         var styles = bucket[i];
 
         newList += "<li><h3>" + i + "</h3><div class=\"weights\">";
-        code += "/" + i.replace(" ", "+") + ":";
+        code += "/" + i.replace(/ /g, "+") + ":";
         
         for (var j in styles) {
             newList += "<span data-font=\"" + i + "\""
