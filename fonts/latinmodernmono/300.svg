@@ -3,11 +3,11 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
 <metadata>
 Created by FontForge 20120731 at Fri Aug  1 16:50:21 2014
- By Alfred Xing
+
 Copyright 2003, 2009 B. Jackowski and J. M. Nowacki (on behalf of TeX users groups). This work is released under the GUST Font License --  see http://tug.org/fonts/licenses/GUST-FONT-LICENSE.txt for details.
 </metadata>
 <defs>
-<font id="LMMonoLt10-Regular" horiz-adv-x="525" >
+<font id="latinmodernmono" horiz-adv-x="525" >
   <font-face 
     font-family="LMMonoLt10"
     font-weight="400"
