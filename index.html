@@ -1,0 +1,67 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brick: Webfonts that actually look good</title>
+    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400,700,900/Open+Sans:400,700,900/Raleway:100,400,500,700,800,900">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVHgBY2gAAACCAIFMF9ffAAAAAElFTkSuQmCC">
+    <meta name="description" content="Brick is an open-source webfont service that serves fonts in their original form for high quality rendering across all browsers.">
+</head>
+<body class="index">
+    <div class="page">
+        {% include header.html %}
+        <section id="features">
+            <div class="letters"></div>
+            <div class="content">
+                <div class="feature">
+                    <h1><span class="ord">1</span>Beautiful</h1>
+                    <p>
+                        We don&rsquo;t modify or subset the font in any way, so they are rendered the way they were meant to be seen.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h1><span class="ord">2</span>Fast</h1>
+                    <p>
+                        Fonts are served through <a href="http://www.fastly.com" target="_blank">Fastly's</a> industry-leading CDN network and supported by <a href="https://www.linode.com">Linode's</a> reliable infrastructure.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h1><span class="ord">3</span>Open source</h1>
+                    <p>
+                        Brick is entirely open source, so in addition to being free, anyone interested can contribute to the project.
+                    </p>
+                </div>
+                <a href="fonts/" class="button">Build your bucket</a>
+            </div>
+        </section>
+        <section id="trusted">
+            <div class="content">
+                <h1>Trusted by</h1>
+            </div>
+            <img src="http://local.dev/Desktop/trusted.svg">
+        </section>
+        <section id="mission">
+            <div class="content">
+                <h1>Mission</h1>
+                <p>
+                    In the age of the Internet, we've found ourselves in yet another typographic battle. In an effort to speed up loading times, we've compressed fonts, and along the way, we've lost much of the quality of typography in found in other media.
+                </p>
+                <p>
+                    Let's change that. The fonts served by Brick are clones of the original, converted without modification to <a href="http://www.w3.org/TR/WOFF/" target="_blank">WOFF</a> format for high quality rendering and fast loading across all modern browsers.
+                </p>
+                <hr>
+                <h2>Notes</h2>
+                <p>
+                    Although it is my intention to keep these fonts as close to the original as possible, they are not meant to be used as replacements on the desktop. For non-web use, please download the fonts from their original source, included in the repository. Please respect the respective licenses of each font, which can also be found in the GitHub repository beside the font files.
+                </p>
+                <p>
+                    If you encounter any issues with any font or this service, please open an issue on GitHub or contact me. Do not contact the font creators; it is likely not their fault.
+                </p>
+            </div>
+        </section>
+        {% include footer.html %}
+    </div>
+</body>
+</html>
