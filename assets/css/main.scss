@@ -24,8 +24,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font: 500 12pt "Destill", "Raleway", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+}
+body.index {
+    h1, h2, h3, h4, h5, h6 {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
 }
 
 a {
@@ -85,6 +89,8 @@ header {
 
     h1 {
         color: #333;
+        text-transform: uppercase;
+        letter-spacing: 3px;
     }
 
     #grid {
