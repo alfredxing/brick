@@ -1,0 +1,17 @@
+<header>
+    <div class="{% if page.layout %}width{% else %}content{% endif %}">
+        <nav>
+            <ul>
+                <li><a href="/fonts">Fonts</a></li>
+                <li><a href="https://github.com/alfredxing/brick/wiki/Usage">Docs</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="https://github.com/alfredxing/brick">GitHub</a></li>
+            </ul>
+        </nav>
+        <a href="/"><h1>Brick</h1></a>
+    </div>
+    {% unless page.layout %}
+    <img src="/assets/images/grid.png" id="grid" width="1000px" height="640px">
+    {% endunless %}
+</header>

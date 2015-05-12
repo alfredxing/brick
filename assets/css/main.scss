@@ -1,0 +1,181 @@
+---
+---
+body {
+    margin: 0;
+    padding: 0;
+
+    font: 400 12pt "Roboto", "Helvetica Neue", "Arial", sans-serif;
+    -webkit-font-feature-settings: "kern", "liga";
+    -moz-font-feature-settings: "kern", "liga";
+    -o-font-feature-settings: "kern", "liga";
+    font-feature-settings: "kern", "liga";
+
+    color: #333;
+}
+
+.page {
+    width: 1000px;
+    margin: 0 auto;
+}
+.content {
+    width: 720px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font: 500 12pt "Destill", "Raleway", sans-serif;
+}
+body.index {
+    h1, h2, h3, h4, h5, h6 {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #EE6650;
+
+    &:hover {
+        color: fade-out(#EE6650, 0.1);
+    }
+}
+
+p {
+    line-height: 1.5em;
+}
+
+button, .button {
+    display: inline-block;
+    font: 400 10pt "Destill", "Raleway", sans-serif;
+    color: #EE6650;
+    letter-spacing: 1px;
+    padding: 1em 1.5em;
+    border: 1px solid #EE6650;
+    border-radius: 3px;
+    -webkit-transition: background-color 0.1s;
+    -o-transition: background-color 0.1s;
+    transition: background-color 0.1s;
+
+    &:hover {
+        color: #EE6650;
+        background-color: fade-out(#EE6650, 0.95);
+    }
+}
+
+nav {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        font: 400 11pt/14pt "Destill", "Raleway", sans-serif;
+        text-transform: uppercase;
+        vertical-align: middle;
+        letter-spacing: 2px;
+    }
+}
+
+header {
+    nav {
+        float: right;
+
+        li {
+            float: left;
+            margin-left: 2em;
+        }
+    }
+
+    h1 {
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    #grid {
+        margin: 3em 0;
+    }
+}
+body.index {
+    header {
+        margin-top: 16em;
+    }
+}
+
+section {
+    margin-top: 5em;
+}
+
+#features {
+    background: url(/assets/images/features.svg) no-repeat top right;
+    background-size: 414px;
+
+    .content {
+        padding: 1px 0 5em 0;
+    }
+
+    .feature {
+        margin-right: 414px;
+    }
+
+    h1 {
+        margin-top: 5em;
+        position: relative;
+
+        .ord {
+            position: absolute;
+            top: 0;
+            left: -2em;
+            color: #CCC;
+        }
+    }
+
+    .button {
+        margin-top: 4em;
+    }
+}
+
+#trusted {
+    h1 {
+        margin: 8em 0 3em 0;
+    }
+    img {
+        width: 1000px;
+        height: 79px;
+    }
+}
+
+#mission {
+    h1 {
+        margin-top: 8em;
+    }
+    hr {
+        border: none;
+        padding: 1.5em 0;
+    }
+}
+
+footer {
+    padding: 8em 0;
+
+    h1 {
+        float: left;
+        vertical-align: top;
+        margin: 0 5em 1.5em 0;
+    }
+
+    nav {
+        float: left;
+        margin-right: 5em;
+
+        li {
+            margin-bottom: 0.5em;
+        }
+    }
+
+    p {
+        padding-top: 3em;
+        clear: both;
+    }
+}

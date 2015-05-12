@@ -1,1 +1,3 @@
-markdown: kramdown
+collections:
+  fonts:
+    output: true
