@@ -8,7 +8,7 @@ layout: null
  */
 
 // Catalogue array
-{% assign fonts = site.pages %}
+{% assign fonts = site.fonts %}
 $catalogue = array(
     {% for font in fonts %}
     {% if font.layout == "font" %}
