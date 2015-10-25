@@ -6,7 +6,7 @@ cache:
   - vendor/bundle
 
 go:
-  - tip
+  - 1.5.1
 
 before_install:
   - rvm install ruby --latest
