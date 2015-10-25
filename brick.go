@@ -1,3 +1,6 @@
+---
+---
+
 // Brick. Webfonts that actually look good
 
 package main
@@ -10,6 +13,8 @@ import (
 	"time"
 )
 
+// Handles an incoming CSS request, and builds CSS based on query parameters
+// (font family, weights and styles, flags)
 func handler(w http.ResponseWriter, r *http.Request) {
 	{% assign fonts = site.fonts %}
 	var fonts = map[string](map[string]string) {
@@ -84,6 +89,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// Starts an HTTP server to listen for incoming requests
 func main() {
 	http.HandleFunc("/", handler)
 	http.ListenAndServe(":9811", nil)
