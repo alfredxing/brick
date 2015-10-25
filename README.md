@@ -43,9 +43,3 @@ Fonts used in the previews:
 ### [Contributing](https://github.com/alfredxing/brick/wiki/Contributing)
 
 For contributing guidelines and instructions, please see the [wiki page](https://github.com/alfredxing/brick/wiki/Contributing).
-
-#### Supporting the project
-
-You can also support this project by helping to cover the costs associated with it:
-- Bitcoin: 12zWXDLguRMiRW1NZ7N4LF3g3Ji1Fb9AQ9
-- [Gittip](https://www.gittip.com/Alfred%20Xing/)
