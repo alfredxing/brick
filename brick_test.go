@@ -86,6 +86,46 @@ func TestFamilies(t *testing.T) {
 	}
 }
 
+// Tests a request including non-existing variants
+func TestNonexistentVariant(t *testing.T) {
+	res := httptest.NewRecorder()
+
+	req, err := http.NewRequest("GET", "http://brick.im/Open+Sans:400,800", nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	handler(res, req)
+	if res.Code != 200 {
+		t.Fail()
+	}
+
+	var expected = formatRule("Open Sans", "normal", "400", "Open Sans Regular", "opensans", "400")
+	if res.Body.String() != expected {
+		t.Fail()
+	}
+}
+
+// Tests a request including non-existing families
+func TestNonexistentFamily(t *testing.T) {
+	res := httptest.NewRecorder()
+
+	req, err := http.NewRequest("GET", "http://brick.im/Foo+Sans:400/Open+Sans:400", nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	handler(res, req)
+	if res.Code != 200 {
+		t.Fail()
+	}
+
+	var expected = formatRule("Open Sans", "normal", "400", "Open Sans Regular", "opensans", "400")
+	if res.Body.String() != expected {
+		t.Fail()
+	}
+}
+
 // Tests a request using the force flag (preventing the browser from
 // loading the font from the local computer)
 func TestForce(t *testing.T) {
