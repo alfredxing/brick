@@ -59,6 +59,11 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		}
 
 		for _, weight := range weights {
+			// Verify that variant exists, else move on
+			if _, exists := fonts[family][weight]; !exists {
+				continue
+			}
+
 			var uri bytes.Buffer
 
 			// Local font URI
