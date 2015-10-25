@@ -5,7 +5,7 @@ go:
   - tip
 
 before_install:
-  - ruby -v
+  - rvm install ruby --latest
   - bundle install
   - bundle exec jekyll build
   - cd _site/
