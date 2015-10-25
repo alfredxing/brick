@@ -1,0 +1,19 @@
+language: go
+sudo: false
+
+cache:
+  directories:
+  - vendor/bundle
+
+go:
+  - 1.5.1
+
+before_install:
+  - rvm install ruby --latest
+  - bundle install --path vendor/bundle --jobs 3
+  - bundle exec jekyll build
+  - cd _site/
+
+script:
+  - go test
+
