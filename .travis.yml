@@ -5,8 +5,6 @@ go:
 
 before_install:
   - ruby -v
-
-before_script:
   - bundle install
   - bundle exec jekyll build
   - cd _site/
