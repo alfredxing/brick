@@ -1,13 +1,16 @@
 language: go
 sudo: false
-cache: bundler
+
+cache:
+  directories:
+  - vendor/bundle
 
 go:
   - tip
 
 before_install:
   - rvm install ruby --latest
-  - bundle install
+  - bundle install --path vendor/bundle --jobs 3
   - bundle exec jekyll build
   - cd _site/
 
