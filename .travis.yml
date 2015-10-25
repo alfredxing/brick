@@ -1,6 +1,11 @@
 language: go
 sudo: false
 
+branches:
+  only:
+    - gh-pages
+    - /^.*$/
+
 cache:
   directories:
   - vendor/bundle
