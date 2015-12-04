@@ -1,0 +1,169 @@
+These fonts are based on Utopia font which was released by Adobe for TeX
+users group with following license:
+
+Adobe Systems Incorporated ("Adobe") hereby grants to the TeX Users
+Group and its members a nonexclusive, royalty-free, perpetual license to
+the typeface software for the Utopia Regular, Utopia Italic, Utopia Bold
+and Utopia bold Italic typefaces, including Adobe Type 1 font programs
+for each style (collectively, the "Software") as set forth below.
+
+Adobe grants the TeX Users Group a license under its copyrights, to use,
+reproduce, display and distribute the Software for any purpose and
+without fee provided that the following copyright notice appears in all
+whole and partial copies of the Software and provided that the following
+trademark symbol and attribution appear in all unmodified copies of the
+Software:
+
+Copyright 1989, 1991 Adobe Systems Incorporated. All rights reserved.
+(alternatively, @1989, 1991 Adobe Systems Incorporated. All rights reserved.)
+Utopia(R)
+Utopia is either a registered trademark or trademark of Adobe Systems
+Incorporated in the United States and/or other countries. Used under
+license. 
+
+Adobe also grants to the TeX Users Group a license to modify the
+Software for any purpose and redistribute such modifications, for any
+purpose and royalty-free, provided that the modified Software shall not
+use the font name(s) or trademark(s), in whole or in part, unless
+explicit written permission is granted by Adobe. This restriction
+applies to all references stored in the Software for identification
+purposes, such as the font menu name and other font description
+fields. The TeX Users Group is also permitted to sublicense, and grant
+such sublicensees the right to further sublicense, any or all the
+foregoing rights through multiple tiers of distribution. The licenses
+granted herein are granted in perpetuity and may not be terminated by
+either party unless such termination is based on a breach of the terms
+and conditions herein stated.
+
+Adobe retains ownership of the copyright in the Software. The TeX Users
+Group agrees that Adobe and its suppliers are the sole and exclusive
+owners of all rights, title and interest, including all copyrights,
+patents, trademarks, trade names, trade secrets and other intellectual
+property rights in the Software. No title or ownership of the Software,
+any copies of the Software, or the patent, copyright, trade secret,
+trademark, trade name or other proprietary rights contained in the
+Software is transferred to the TeX Users Group.
+
+The Adobe trademarks shall not be used in advertising pertaining to the
+distribution of the Software without express prior permission from
+Adobe. Any such use shall be in accordance with the Adobe trademark
+guidelines, available on the Adobe website at
+http://www.adobe.com/misc/pdfs/TM GuideforThirdPartiesFinal.pdf.
+If any portion of the Software is changed, it cannot be marketed under
+Adobe's trademarks unless Adobe, in its sole discretion, approves by a
+prior writing the quality of the resulting implementation.
+
+The TeX Users Group shall have the right to evaluate the Software
+provided by Adobe.
+
+Then the TeX Users Group (TUG) gave all such rights, irrevocably and in
+perpetuity, to any and all interested parties.
+
+Heuristica fonts contains glyphs from Vntopia font family,
+http://vntex.sf.net which was released by Han The Thanh on 2006
+according to the conditions of the Adobe/TUG license agreement.
+
+Build and install instructions
+==============================
+
+You need fontforge (http://fontforge.sourceforge.net/), xgridfit
+(http://xgridfit.sourceforge.net/) and font-helpers
+(http://code.google.com/p/font-helpers/ ) in order to build the fonts from
+the sources. Also you should have GNU make and coreutils. At first you
+must unpack/copy files from font-helpers into the directory where the *.sfd
+files are located. Then type
+
+make
+
+and the truetype fonts will be produced. On systems with X.Org you may do
+
+make install
+
+as root to install the fonts system-wide (/usr/share/fonts/TTF). Otherwise
+copy the *.ttf files into ~/.fonts/ directory. Then run fc-cache if you have
+fontconfig.
+
+ChangeLog
+---------
+
+2012-03-06 Andrey V. Panov
+	Added more smallcaps.
+	Added substitutions for the Ewe language.
+	Added several extended Latin characters.
+	Added ligatures with "esh".
+	Version 1.0.1 is released.
+	
+2011-12-28 Andrey V. Panov
+	Added panose values.
+	Changed Win and HHead OS/2 metrics.
+	Added more ligatures with "f" and "longs".
+	Added "beta", "gamma", "lambda", "theta", "chi" to Regular;
+	Version 1.0 is released.
+
+2011-02-15 Andrey V. Panov
+	Added subscript, superscript and tabular oldstyle figures.
+	Added more vulgar fractions.
+	Added several extended Latin and Cyrillic characters.
+	Version 0.4 is released.
+
+2010-10-28 Andrey V. Panov
+	Added small capitals (basic Latin and Cyrillic) in Regular.
+	Added more phonetic characters to Regular.
+	Version 0.3 is released.
+
+2010-06-09 Andrey V. Panov
+	Added several characters mostly for support of Polish and Romanian.
+	Version 0.2.2 is released.
+
+2010-02-15 Andrey V. Panov
+	Tuned some kerning pairs in Cyrillic.
+	Added U+211F, U+2123.
+	Added LaTeX support.
+	Manually instructed "g" in Regular.
+	Version 0.2.1 is released.
+
+2009-08-09 Andrey V. Panov
+	Version 0.2 is released.
+
+2009-08-08 Andrey V. Panov
+	Added Cyrillic letters to support modern Abkhazian alphabet.
+	Added "Euro".
+
+2009-08-07 Andrey V. Panov
+	Added kerning to Cyrillic.
+
+2009-07-08 Andrey V. Panov
+	Added old style kerning ('kern' table).
+
+2009-03-21 Andrey V. Panov
+
+	Some elements of truetype control value table are now modified
+	with xgridfit. So build process requires ttx from fontutils and
+	xgridfit.
+
+2009-03-11 Andrey V. Panov
+
+	Merged glyphs from Vntopia fonts of Han The Thanh with modifications for
+	more condensed accents.
+	Added U+494, U+495, U+4C7, U+4C8, U+512, U+513.
+	Added several IPA charters to Regular.
+	Updated scripts for producing fonts.
+
+2009-01-25 Andrey V. Panov
+
+	Fixed spacing of generated rotated glyphs in italic fonts.
+	Added longs, u+268, esh, several extended Cyrillic letters.
+
+2008-12-24 Andrey V. Panov
+
+	Added more accents.
+
+2008-12-07 Andrey V. Panov
+
+	Added capital variants for "ring", "tilde". Generating script now builds
+	a lot of accented Latin and Cyrillic glyphs and several IPA rotated 
+	symbols.
+
+2008-11-25 Andrey V. Panov
+
+	The first beta version (0.1) is released.
