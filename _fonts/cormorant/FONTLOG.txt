@@ -1,0 +1,134 @@
+FONTLOG for the Cormorant font family
+
+This file provides detailed information on the Cormorant Font Software.
+This information should be distributed along with the Cormorant fonts
+and any derivative works.
+
+Basic Font Information
+
+Cormorant is a Unicode display serif typeface encompassing the Adobe Latin
+4 range of characters as well as the Cyrillic support.  It is inspired by 
+Claude Garamont's timeless designs.
+
+This release contains six styles:
+- Roman
+- Italic
+- Infant (a version of the Roman with single-storey /a/g/y and lining 
+  figures)
+- Infant Italic
+- Garamond (a version of the Roman where several characters that notably
+  differ from Garamond tradition are replaced by more traditional forms)
+- Garamond Italic
+- Upright (an upright script version of the Italic)
+- SC (a small-caps version of the Roman)
+- Unicase (a small-caps version of the Roman mixed with some lowercase 
+  shape substitutions)
+
+Each style comes in five weights:
+- Light
+- Regular
+- Book
+- Semibold
+- Bold
+  
+Cormorant is made for large sizes; the larger, the better.  However, it 
+works well as a text face in high-resolution environments (do not try 
+this on a webpage!).
+  
+Documentation can be found at the Cormorant GitHub page:
+https://github.com/CatharsisFonts/Cormorant
+
+An illustrated presentation can be found at the Cormorant Behance page:
+https://www.behance.net/gallery/28579883/Cormorant-an-open-source-display-font-family
+
+To contribute to the project, contact Christian Thalmann (see below).
+
+
+
+ChangeLog
+
+2015-11-17: Release v2.0
+THIS IS INTENDED AS THE FIRST OFFICIAL "FULL VERSION" OF CORMORANT.  I set the version number to 2.0 rather than 1.0 because early test versions of the fonts had the version number 1.0 in their metadata, and I wanted to make sure the current version is unambiguously marked as the newest.
+
+
+2015-10-22: Release v0.8
+Now exporting the new "Cormorant Garamond" font family, which has the stylistic set SS02 activated by default.  The release now includes an "Essentials" package to minimize the font bloat for casual users, containing only the basic Roman, Italic, and SC fonts.  Lots and lots of bug fixes (mostly concerning the interaction between different OpenType features) thanks to Þorsten from the typografie.info forums. Thanks!
+
+
+2015-09-28: Version v0.7
+Trying to fix the font selection problems, in particular on Windows (wrong attribution of Italics and Bolds, etc.).  Removed OTF fonts from repo -- TTF seems to work better.
+
+
+2015-09-27: Release v0.6
+Changed CALT and LIGA features to provide acceptable results for sequences like /f/b even when LIGA is turned off. Added /tz character and /f_f_f ligature. Switched release package to using TrueType rather than OpenType fonts since the hinting seems to work better for the former.
+ 
+
+2015-09-24: Release v0.5
+Tweaked alignment zones and stem definitions for better autohinting.  Changed all currency symbols to be at small-caps height by default.
+
+
+2015-09-20: Release v0.4
+Changed B and b.sc to harmonize better with the rest of the typeface; the original version is now in the calligraphic stylistic set SS01.  Small caps letters with crossbars (e.sc etc.) can now have serifs on their crossbar via SS12.  Added Hungarian localization to match angles of acute and double acute accents.  Fixed some kerning.
+
+
+2015-09-19: Version v0.3.1
+Added Cyrillic small-caps.
+
+
+2015-09-15: Release v0.3
+Completed Cyrillic inventory; to be tested.
+
+
+2015-09-14: Version v0.2.2
+Added Cyrillic support, including Serbian/Macedonian and Bulgarian 
+alternates.
+
+
+2015-08-27: Release v0.2
+The spin-off styles (Infant, Upright, SC, Unicase) are now separate font
+families from the default ones (Roman, Italic).  This is to prevent 
+Keynote and PowerPoint from reacting strangely to the presence of several
+instances containing the string "Bold" within the same family.  IMPORTANT:
+If you're upgrading from a previous version of Cormorant, please delete
+your old Cormorant font files before installing the new ones.  Otherwise
+you'll end up with both the old and the new files, and the confusion within
+PowerPoint etc. will persist.  If you've used an older version of Cormorant
+in a document, you will also likely have to pick the font anew, since the
+font names changed.
+
+
+2015-08-23: Release v0.1
+
+
+2015-08-22: Redefined the UPM scale to make the type appear larger at a 
+given point size, and to reduce the unnecessarily large line spacing.
+WARNING: Documents and webpages built with older versions of the fonts 
+may require some reformatting!
+
+
+2015-08-17: Unified Roman, SC, Unicase, and Infant into a single Glyphs
+source file.  All four styles are now exported from CormorantRoman.glyphs.
+Run the "Cormorant Rename Glyphs Parameter.py" script to update the 
+derivation laws prior to export.
+(Christian Thalmann)
+
+
+2015-08-15: Added metadata to the fonts, added this fontlog.
+(Christian Thalmann)
+
+
+2015-08-11: First release on GitHub.
+(Christian Thalmann)
+
+
+
+Acknowledgements
+
+If you make modifications be sure to add your name (N), email (E), web-address
+(if you have one) (W) and description (D). This list is in alphabetical order.
+
+N: Christian Thalmann (Catharsis Fonts)
+E: christian.d.thalmann@gmail.com
+W: http://www.myfonts.com/foundry/Catharsis_Fonts/
+D: Creator of the Cormorant font family
+
