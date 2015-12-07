@@ -4,5 +4,5 @@ collections:
   pages:
     output: true
 
-exclude: [ "vendor/bundle" ]
+exclude: [ "vendor/bundle", "_tasks" ]
 
