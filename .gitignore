@@ -1,4 +1,5 @@
 _site/
 .sass-cache/
+
+# charmap files
 *.charmap
-_includes/charmaps/*

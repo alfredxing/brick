@@ -17,6 +17,10 @@ ext = ".charmap"
 # The dir to output to
 output_dir = "_includes/charmaps"
 
+# The "proof" dir. This will be populated with empty files that prove the
+# template exists. Necessary due to jekyll's restrictions
+proof_dir = "assets/charmap_template"
+
 # How many columns the table should have
 cols = 10
 
@@ -26,8 +30,9 @@ cols = 10
 
 
 
-# Make sure output dir ends in slash
+# Make sure dirs ends in slash
 output_dir << '/' unless output_dir.end_with?('/')
+proof_dir << '/' unless proof_dir.end_with?('/')
 
 # Generate the html
 def make_html( charmap, columns )
@@ -92,6 +97,9 @@ files.each do |charmap|
 
 	# Close file
 	template.close
+
+	# Create an empty file in the charmap dir that proves it exists
+	it_exists = File.open( "#{proof_dir}#{font_name.gsub(/\s+/, '')}-#{charmap_name}" , "w" );
 end
 
 # And we're done!

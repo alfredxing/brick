@@ -156,6 +156,26 @@ section {
     }
 }
 
+table {
+	border-collapse: collapse;
+
+	#preview .charmap & {
+		font-size: 1.5em;
+	}
+}
+
+tr {
+	border-bottom: 1px solid rgba(127, 127, 127, 0.5);
+}
+
+td, th {
+	padding: 0.75em;
+
+	&:not(:last-child) {
+		border-right: 1px solid rgba(127,127,127,0.2);
+	}
+}
+
 footer {
     padding: 8em 0;
 

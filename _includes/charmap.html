@@ -1,12 +1,20 @@
+{% capture charmap_id %}{{ page.family }}-{{ charmap_name }}{% endcapture %}
+{% capture charmap_id %}{{ charmap_id | replace: " " "" }}{% endcapture %}
+{% capture charmap_id %}/assets/charmap_template/{{ charmap_id }}{% endcapture %}
+
+{% assign display = false %}
+{% for static_file in site.static_files %}
+	{% if static_file.path == charmap_id %}
+		{% assign display = true %}
+	{% endif %}
+{% endfor %}
+
+{% unless display == false %}
+
 <article class="charmap">
 	<span class="section">Character Map</span>
-	{% assign charmap_name = page.styles.first[0] %}
-	{% for style in page.styles %}
-		{% if style[0] == '400' %}
-			{% capture charmap_name %}{{ style[0] }}{% endcapture %}
-		{% endif %}
-	{% endfor %}
-	{% capture charmap_path %}charmaps/{{ page.family }}/{{ charmap_name }}.html{% endcapture %}
-	{% capture charmap_path %}{{charmap_path | replace: " " "" }}{% endcapture %}
 	{% include {{charmap_path}} %}
 </article>
+
+{% endunless %}
+

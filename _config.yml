@@ -4,5 +4,6 @@ collections:
   pages:
     output: true
 
-exclude: [ "vendor/bundle", "_tasks" ]
+exclude: [ "vendor/bundle" ]
+#include: [ "_includes/charmaps" ]
 
