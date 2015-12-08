@@ -69,8 +69,8 @@ files.each do |charmap|
 	font_name = File
 		.read( File.dirname( charmap ) + '/index.html' )
 		.scan( /(?<=family: )(.*.)/ )[0][0]
-	charmap_style = File.basename( charmap, File.extname( charmap ) )
-	template_name = "#{charmap_style}.html"
+	charmap_name = File.basename( charmap, File.extname( charmap ) )
+	template_name = "#{charmap_name}.html"
 	template_dir = "#{output_dir}#{font_name}/"
 
 	html = make_html( File.read( charmap ), cols )

@@ -52,9 +52,9 @@ files.each do |font|
 	# delete temp file
 	File.delete( temp_name )
 
-	# Make an output file with the same dir as font file, and a suffix to
-	# to the existing file type
-	output = File.open( font + ext, "w" );
+	# Make an output file with the same dir as font file
+	#output = File.open( font + ext, "w" );
+	output = File.open( "#{File.dirname( font )}/#{font_base_name}#{ext}", "w" );
 	output.truncate(0)
 
 	# Output the unicode values line-by-line
