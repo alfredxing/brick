@@ -1,3 +1,12 @@
+{% assign charmap_name = page.styles.first[0] %}
+{% for style in page.styles %}
+	{% if style[0] == '400' %}
+		{% capture charmap_name %}{{ style[0] }}{% endcapture %}
+	{% endif %}
+{% endfor %}
+{% capture charmap_path %}charmaps/{{ page.family }}/{{ charmap_name }}.html{% endcapture %}
+{% capture charmap_path %}{{ charmap_path | replace: " " "" }}{% endcapture %}
+
 {% capture charmap_id %}{{ page.family }}-{{ charmap_name }}{% endcapture %}
 {% capture charmap_id %}{{ charmap_id | replace: " " "" }}{% endcapture %}
 {% capture charmap_id %}/assets/charmap_template/{{ charmap_id }}{% endcapture %}

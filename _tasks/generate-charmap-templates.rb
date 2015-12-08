@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require "fileutils"
+
 # Generate character map templates. This will be used by Jekyll to build the
 # character maps
 
@@ -33,6 +35,9 @@ cols = 10
 # Make sure dirs ends in slash
 output_dir << '/' unless output_dir.end_with?('/')
 proof_dir << '/' unless proof_dir.end_with?('/')
+
+# clear proof files before we start
+FileUtils.rm_rf( Dir.glob("#{proof_dir}/*") )
 
 # Generate the html
 def make_html( charmap, columns )
