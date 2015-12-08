@@ -27,7 +27,7 @@ end
 stopwatch_start = Time.now
 
 # Get files
-files = Dir.glob( '_fonts/*/*.woff' )
+files = Dir.glob( '_fonts/*/400.woff' )
 
 # The resulting extension
 ext = ".charmap"
@@ -55,6 +55,7 @@ files.each do |font|
 	# Make an output file with the same dir as font file, and a suffix to
 	# to the existing file type
 	output = File.open( font + ext, "w" );
+	output.truncate(0)
 
 	# Output the unicode values line-by-line
 	output << characters.join( "\n" )
