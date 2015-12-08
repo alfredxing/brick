@@ -64,24 +64,33 @@ end
 files.each do |charmap|
 	puts "Generating template for #{charmap}"
 
-	#font_name = File.basename( File.dirname( charmap ) )
-	# Get the font name from the index.html file
+	# Get the font name from the index.html file (ex: `Alegreya Sans`)
 	font_name = File
 		.read( File.dirname( charmap ) + '/index.html' )
 		.scan( /(?<=family: )(.*.)/ )[0][0]
+
+	# Get charmap name without extension (ex: `400i`)
 	charmap_name = File.basename( charmap, File.extname( charmap ) )
+
+	# Append charmap name with `.html` for use as template name
 	template_name = "#{charmap_name}.html"
-	template_dir = "#{output_dir}#{font_name}/"
+
+	# Join `output_dir` and `font_name`, with whitespaces removed
+	template_dir = "#{output_dir}#{font_name.gsub(/\s+/, "")}/"
+
 
 	html = make_html( File.read( charmap ), cols )
 
+	# Create directory if it doesn't exist
 	Dir.mkdir( template_dir ) unless File.exists?( template_dir )
 
+	# Create new template file
 	template = File.open( template_dir + "/" + template_name, "w" );
 
 	# Write the HTML
 	template << html
 
+	# Close file
 	template.close
 end
 

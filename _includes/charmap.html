@@ -1,0 +1,12 @@
+<article class="charmap">
+	<span class="section">Character Map</span>
+	{% assign charmap_name = page.styles.first[0] %}
+	{% for style in page.styles %}
+		{% if style[0] == '400' %}
+			{% capture charmap_name %}{{ style[0] }}{% endcapture %}
+		{% endif %}
+	{% endfor %}
+	{% capture charmap_path %}charmaps/{{ page.family }}/{{ charmap_name }}.html{% endcapture %}
+	{% capture charmap_path %}{{charmap_path | replace: " " "" }}{% endcapture %}
+	{% include {{charmap_path}} %}
+</article>

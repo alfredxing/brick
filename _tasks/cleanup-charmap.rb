@@ -25,7 +25,7 @@ files.each do |charmap|
 				.uniq
 				.map{ |n| n.rjust( 4, "0" ) }
 				.sort_by{ |l| l.downcase }
-				.slice( 31..-1 )
+				.slice( 32..-1 )
 				.join( "\n" )
 
 	output = File.open( charmap, "w" )

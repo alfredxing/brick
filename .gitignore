@@ -1,4 +1,4 @@
 _site/
 .sass-cache/
 *.charmap
-#_includes/charmaps/**/*.html
+_includes/charmaps/*

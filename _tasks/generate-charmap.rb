@@ -27,7 +27,8 @@ end
 stopwatch_start = Time.now
 
 # Get files
-files = Dir.glob( '_fonts/*/400.woff' )
+#files = Dir.glob( '_fonts/*/400.woff' )
+files = Dir.glob( '_fonts/*/*.woff' )
 
 # The resulting extension
 ext = ".charmap"
