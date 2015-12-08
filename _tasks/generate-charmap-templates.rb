@@ -36,6 +36,10 @@ cols = 10
 output_dir << '/' unless output_dir.end_with?('/')
 proof_dir << '/' unless proof_dir.end_with?('/')
 
+# Create dirs if it doesn't exist
+Dir.mkdir( output_dir ) unless File.exists?( output_dir )
+Dir.mkdir( proof_dir ) unless File.exists?( proof_dir )
+
 # clear proof files before we start
 FileUtils.rm_rf( Dir.glob("#{proof_dir}/*") )
 
