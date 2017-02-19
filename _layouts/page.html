@@ -8,8 +8,26 @@
     <link rel="stylesheet" href="/assets/css/old.css">
     <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVHgBY2gAAACCAIFMF9ffAAAAAElFTkSuQmCC">
 	{% if page.family %}
-	<link rel="stylesheet" type="text/css" href="//brick.a.ssl.fastly.net/{{ page.family }}:{% for style in page.styles %}{{ style[0] }}{% unless forloop.last %},{% endunless %}{% endfor %}:f">
-	<style type="text/css">#preview, #preview *{font-family:"{{ page.family }}"}</style>
+		{% if jekyll.environment == "development" %}
+			<style>
+			{% for style in page.styles %}
+				{% capture italic %}{{ style[0] | slice: -1 }}{% endcapture %}
+				@font-face {
+					font-family: '{{ page.family }}';
+					{% if italic == "i" %}
+						font-style: italic;
+					{% else %}
+						font-style: normal;
+					{% endif %}
+					font-weight: {{ style[0] | remove: "i" }};
+					src: url('./{{ style[0] }}.woff') format('woff');
+				}
+			{% endfor %}
+			</style>
+		{% else %}
+			<link rel="stylesheet" type="text/css" href="//brick.a.ssl.fastly.net/{{ page.family }}:{% for style in page.styles %}{{ style[0] }}{% unless forloop.last %},{% endunless %}{% endfor %}:f">
+		{% endif %}
+		<style type="text/css">#preview, #preview *{font-family:"{{ page.family }}"}</style>
 	{% endif %}
 </head>
 <body>
