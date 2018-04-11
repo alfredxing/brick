@@ -15,11 +15,11 @@ Okay, let's get started. I don't want to overload the GitHub servers, so the fon
 Suppose you want to use a font that's in the catalog, for example, TeX Gyre Heros, and only in regular weight.  
 The stylesheet URL would be structured like this:  
 ````
-//brick.a.ssl.fastly.net/TeX+Gyre+Heros:400
+//brick.freetls.fastly.net/TeX+Gyre+Heros:400
 ````
 And if you also want to load EB Garamond regular and italic, you can do that too:
 ````
-//brick.a.ssl.fastly.net/TeX+Gyre+Heros:400/EB+Garamond:400,400i
+//brick.freetls.fastly.net/TeX+Gyre+Heros:400/EB+Garamond:400,400i
 ````
 
 Big shoutout to [Fastly](http://www.fastly.com), whose backing makes everything a lot faster, and [Linode](https://www.linode.com/), for providing a reliable origin server!

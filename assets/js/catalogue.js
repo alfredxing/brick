@@ -24,7 +24,7 @@ function filter() {
 
 function updateBucket() {
     var newList = "",
-        code = "<link rel=\"stylesheet\" href=\"\/\/brick.a.ssl.fastly.net",
+        code = "<link rel=\"stylesheet\" href=\"\/\/brick.freetls.fastly.net",
         size = Object.keys(bucket).length;
 
     document.getElementById("bucket-num").textContent = size + ((size === 1) ? " font" : " fonts");
