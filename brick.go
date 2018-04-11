@@ -1,7 +1,7 @@
 ---
 ---
 
-// Brick. Webfonts that actually look good
+// Brick
 
 package main
 
@@ -13,20 +13,20 @@ import (
 	"time"
 )
 
+// Generate the font definitions map using Jekyll
+var FONTS = map[string](map[string]string) {
+	{%- for font in site.fonts %}
+	"{{ font.family }}": map[string]string {
+		{%- for style in font.styles %}
+		"{{ style[0] }}": "{{ style[1] }}",
+		{%- endfor %}
+	},
+	{%- endfor %}
+}
+
 // Handles an incoming CSS request, and builds CSS based on query parameters
 // (font family, weights and styles, flags)
 func handler(w http.ResponseWriter, r *http.Request) {
-	{% assign fonts = site.fonts %}
-	var fonts = map[string](map[string]string) {
-		{% for font in fonts %}
-		"{{ font.family }}": map[string]string {
-			{% for style in font.styles %}
-			"{{ style[0] }}": "{{ style[1] }}",
-			{% endfor %}
-		},
-		{% endfor %}
-	}
-
 	w.Header().Set("Content-type", "text/css")
 	w.Header().Set("X-Content-Type-Options", "nosniff")
 	w.Header().Set("Cache-Control", "public, max-age=2628000")
@@ -60,7 +60,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 		for _, weight := range weights {
 			// Verify that variant exists, else move on
-			if _, exists := fonts[family][weight]; !exists {
+			if _, exists := FONTS[family][weight]; !exists {
 				continue
 			}
 
@@ -68,7 +68,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 			// Local font URI
 			if !strings.Contains(flags, "f") {
-				local := fonts[family][weight]
+				local := FONTS[family][weight]
 				uri.WriteString("local('")
 				uri.WriteString(local)
 				uri.WriteString("'),")
