@@ -57,7 +57,7 @@ func TestVariants(t *testing.T) {
 	}
 
 	var expected = formatRule("Raleway", "normal", "400", "Raleway Regular", "raleway", "400") +
-		formatRule("Raleway", "italic", "400", "Raleway Italic", "raleway", "400i") + 
+		formatRule("Raleway", "italic", "400", "Raleway Italic", "raleway", "400i") +
 		formatRule("Raleway", "normal", "700", "Raleway Bold", "raleway", "700")
 	if res.Body.String() != expected {
 		t.Fail()
@@ -79,7 +79,7 @@ func TestFamilies(t *testing.T) {
 	}
 
 	var expected = formatRule("Open Sans", "normal", "400", "Open Sans Regular", "opensans", "400") +
-		formatRule("Open Sans", "normal", "700", "Open Sans Bold", "opensans", "700") + 
+		formatRule("Open Sans", "normal", "700", "Open Sans Bold", "opensans", "700") +
 		formatRule("Merriweather", "normal", "400", "Merriweather", "merriweather", "400")
 	if res.Body.String() != expected {
 		t.Fail()
@@ -141,16 +141,15 @@ func TestForce(t *testing.T) {
 		t.Fail()
 	}
 
-	var expected = "@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:url(//brick.a.ssl.fastly.net/fonts/roboto/400.woff) format('woff')}"
+	var expected = "@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:url(//brick.freetls.fastly.net/fonts/roboto/400.woff) format('woff')}"
 	if res.Body.String() != expected {
 		t.Fail()
 	}
 }
 
-
 // Templating function to build the expected CSS @font-face rules
 func formatRule(family string, style string, weight string, local string, slug string, file string) string {
 	template := "@font-face{font-family:'%s';font-style:%s;font-weight:%s;" +
-		"src:local('%s'),url(//brick.a.ssl.fastly.net/fonts/%s/%s.woff) format('woff')}"
+		"src:local('%s'),url(//brick.freetls.fastly.net/fonts/%s/%s.woff) format('woff')}"
 	return fmt.Sprintf(template, family, style, weight, local, slug, file)
 }

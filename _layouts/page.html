@@ -3,7 +3,7 @@
 <head>
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ page.family }}{% endif %} | Brick</title>
 	<meta name="description" content="{% if page.family %}Preview {{ page.family }}'s weights and styles from the Brick catalogue.{% endif %}{{ page.description }}">
-	<link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400/Raleway:500/Latin+Modern+Mono:400">
+	<link rel="stylesheet" href="//brick.freetls.fastly.net/Roboto:400/Raleway:500/Latin+Modern+Mono:400">
 	<link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/old.css">
     <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQAAAAA3bvkkAAAAAnRSTlMAAQGU/a4AAAAKSURBVHgBY2gAAACCAIFMF9ffAAAAAElFTkSuQmCC">
@@ -25,7 +25,7 @@
 			{% endfor %}
 			</style>
 		{% else %}
-			<link rel="stylesheet" type="text/css" href="//brick.a.ssl.fastly.net/{{ page.family }}:{% for style in page.styles %}{{ style[0] }}{% unless forloop.last %},{% endunless %}{% endfor %}:f">
+			<link rel="stylesheet" type="text/css" href="//brick.freetls.fastly.net/{{ page.family }}:{% for style in page.styles %}{{ style[0] }}{% unless forloop.last %},{% endunless %}{% endfor %}:f">
 		{% endif %}
 		<style type="text/css">#preview, #preview *{font-family:"{{ page.family }}"}</style>
 	{% endif %}
