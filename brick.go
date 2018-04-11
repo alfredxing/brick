@@ -75,7 +75,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 			}
 
 			// Brick URI
-			uri.WriteString("url(//brick.a.ssl.fastly.net/fonts/")
+			uri.WriteString("url(//brick.freetls.fastly.net/fonts/")
 			uri.WriteString(strings.ToLower(strings.Replace(family, " ", "", -1)))
 			uri.WriteString("/")
 			uri.WriteString(weight)

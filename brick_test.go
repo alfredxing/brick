@@ -141,7 +141,7 @@ func TestForce(t *testing.T) {
 		t.Fail()
 	}
 
-	var expected = "@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:url(//brick.a.ssl.fastly.net/fonts/roboto/400.woff) format('woff')}"
+	var expected = "@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:url(//brick.freetls.fastly.net/fonts/roboto/400.woff) format('woff')}"
 	if res.Body.String() != expected {
 		t.Fail()
 	}
@@ -150,6 +150,6 @@ func TestForce(t *testing.T) {
 // Templating function to build the expected CSS @font-face rules
 func formatRule(family string, style string, weight string, local string, slug string, file string) string {
 	template := "@font-face{font-family:'%s';font-style:%s;font-weight:%s;" +
-		"src:local('%s'),url(//brick.a.ssl.fastly.net/fonts/%s/%s.woff) format('woff')}"
+		"src:local('%s'),url(//brick.freetls.fastly.net/fonts/%s/%s.woff) format('woff')}"
 	return fmt.Sprintf(template, family, style, weight, local, slug, file)
 }
