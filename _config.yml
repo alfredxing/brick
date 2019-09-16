@@ -5,4 +5,5 @@ collections:
     output: true
 
 exclude: [ "vendor/bundle" ]
+#include: [ "_includes/charmaps" ]
 
